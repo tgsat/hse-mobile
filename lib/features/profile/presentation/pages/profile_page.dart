@@ -7,7 +7,7 @@ import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:hse_product/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:hse_product/features/profile/presentation/widgets/body_profile.dart';
-import 'package:hse_product/injection_container.dart';
+import 'package:hse_product/di/injection_container.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);

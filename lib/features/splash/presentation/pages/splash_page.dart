@@ -4,7 +4,7 @@ import 'package:hse_product/features/dashboard/presentation/pages/navigation_pag
 import 'package:hse_product/features/login/presentation/pages/login_page.dart';
 import 'package:hse_product/features/splash/presentation/bloc/splash_bloc.dart';
 import 'package:hse_product/features/splash/presentation/widgets/body_splash.dart';
-import 'package:hse_product/injection_container.dart';
+import 'package:hse_product/di/injection_container.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);

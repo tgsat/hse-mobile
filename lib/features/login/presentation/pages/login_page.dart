@@ -4,7 +4,7 @@ import 'package:hse_product/core/presentation/widgets/snack_bars/snack_bar_error
 import 'package:hse_product/features/dashboard/presentation/pages/navigation_page.dart';
 import 'package:hse_product/features/login/presentation/bloc/login_bloc.dart';
 import 'package:hse_product/features/login/presentation/widgets/body_login.dart';
-import 'package:hse_product/injection_container.dart';
+import 'package:hse_product/di/injection_container.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);

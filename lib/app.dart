@@ -4,7 +4,7 @@ import 'package:hse_product/features/login/presentation/pages/login_page.dart';
 import 'package:hse_product/features/splash/presentation/pages/splash_page.dart';
 import 'core/utils/helpers/navigation_service.dart';
 import 'core/utils/values/theme_config.dart';
-import 'injection_container.dart';
+import 'di/injection_container.dart';
 
 class App extends StatelessWidget {
   @override
