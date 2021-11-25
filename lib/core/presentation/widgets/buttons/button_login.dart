@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:hse_product/core/utils/values/color_config.dart';
 
 class ButtonLogin extends StatelessWidget {
-  final String iconAssets;
+  // final String iconAssets;
   final String? label;
   final Function()? onPress;
 
-  const ButtonLogin(
-      {Key? key, required this.iconAssets, required this.label, this.onPress})
-      : super(key: key);
+  const ButtonLogin({
+    Key? key,
+    // required this.iconAssets,
+    required this.label,
+    this.onPress,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return OutlinedButton.icon(
@@ -20,7 +23,8 @@ class ButtonLogin extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(100.0)),
         ),
       ),
-      icon: Image.asset(iconAssets),
+      // icon: Image.asset(iconAssets),
+      icon: Image.asset(''),
       label: Text(
         label ?? '',
         style: TextStyle(fontSize: 15),

@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+// import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+// import 'package:google_sign_in/google_sign_in.dart';
 import 'package:hse_product/core/data/models/login_model.dart';
 import 'package:hse_product/core/error/exceptions.dart';
 import 'package:hse_product/core/utils/values/endpoints.dart';
@@ -21,21 +21,23 @@ class LoginRemoteDataSourceImpl extends LoginRemoteDataSource {
   @override
   Future<LoginModel> loginGoogle() async {
     try {
-      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-      // If user cancel;
-      if (googleUser == null) {
-        throw ServerException();
-      }
-      // Obtain the auth details from the request
-      final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
+      // final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+      // // If user cancel;
+      // if (googleUser == null) {
+      //   throw ServerException();
+      // }
+      // // Obtain the auth details from the request
+      // final GoogleSignInAuthentication googleAuth =
+      //     await googleUser.authentication;
 
-      FormData _formData = new FormData.fromMap({
-        'provider': 'google',
-        'access_token': googleAuth.accessToken,
-      });
+      // FormData _formData = new FormData.fromMap({
+      //   'provider': 'google',
+      //   'access_token': googleAuth.accessToken,
+      // });
 
-      final response = await dio.post(EndPoints.SOCIAL_LOGIN, data: _formData);
+      final response = await dio.post(
+        EndPoints.SOCIAL_LOGIN,
+      );
 
       if (response.statusCode == 200) {
         return LoginModel.fromJson(response.data);
@@ -51,14 +53,16 @@ class LoginRemoteDataSourceImpl extends LoginRemoteDataSource {
   Future<LoginModel> loginFacebook() async {
     try {
       // Trigger the sign-in flow
-      final LoginResult loginResult = await FacebookAuth.instance.login();
+      // final LoginResult loginResult = await FacebookAuth.instance.login();
 
-      FormData _formData = new FormData.fromMap({
-        'provider': 'facebook',
-        'access_token': loginResult.accessToken!.token,
-      });
+      // FormData _formData = new FormData.fromMap({
+      //   'provider': 'facebook',
+      //   'access_token': loginResult.accessToken!.token,
+      // });
 
-      final response = await dio.post(EndPoints.SOCIAL_LOGIN, data: _formData);
+      final response = await dio.post(
+        EndPoints.SOCIAL_LOGIN,
+      );
 
       if (response.statusCode == 200) {
         return LoginModel.fromJson(response.data);

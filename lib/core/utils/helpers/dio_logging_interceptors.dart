@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+// import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+// import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:hse_product/di/injection_container.dart';
 

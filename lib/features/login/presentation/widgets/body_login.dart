@@ -5,7 +5,7 @@ import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/dashboard/presentation/pages/navigation_page.dart';
 import 'package:hse_product/features/login/presentation/bloc/login_bloc.dart';
-import 'linkedin_form.dart';
+// import 'linkedin_form.dart';
 
 class BodyLogin extends StatelessWidget {
   const BodyLogin({Key? key}) : super(key: key);
@@ -24,7 +24,18 @@ class BodyLogin extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('assets/images/ico_wish.png'),
+                Container(
+                  margin: const EdgeInsets.all(20),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(80),
+                        bottomLeft: Radius.circular(80)),
+                    child: Image.asset(
+                      'assets/images/logo_qhse.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
                 SizedBox(height: SizeConfig.marginForm),
                 SizedBox(height: 30),
                 Text(
@@ -38,10 +49,14 @@ class BodyLogin extends StatelessWidget {
                 Container(
                   width: SizeConfig.maxWidth(context),
                   child: ButtonLogin(
-                    iconAssets: 'assets/images/ico_google.png',
+                    // 'assets/images/ico_google.png',
                     label: Dictionary.login_with_google.toUpperCase(),
                     onPress: () {
-                      _bloc..add(LoginGoogleStarted());
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => NavigationPage()));
+                      // _bloc..add(LoginGoogleStarted());
                     },
                   ),
                 ),
@@ -49,10 +64,10 @@ class BodyLogin extends StatelessWidget {
                 Container(
                   width: SizeConfig.maxWidth(context),
                   child: ButtonLogin(
-                    iconAssets: 'assets/images/ico_fb.png',
+                    // iconAssets: 'assets/images/ico_fb.png',
                     label: Dictionary.login_with_fb.toUpperCase(),
                     onPress: () {
-                      _bloc..add(LoginFacebookStarted());
+                      // _bloc..add(LoginFacebookStarted());
                     },
                   ),
                 ),
@@ -60,17 +75,17 @@ class BodyLogin extends StatelessWidget {
                 Container(
                   width: SizeConfig.maxWidth(context),
                   child: ButtonLogin(
-                    iconAssets: 'assets/images/ico_linkedin.png',
+                    // iconAssets: 'assets/images/ico_linkedin.png',
                     label: Dictionary.login_with_linkedin.toUpperCase(),
                     onPress: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => LinkedinForm(
-                            bloc: _bloc,
-                          ),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (BuildContext context) => LinkedinForm(
+                      //       bloc: _bloc,
+                      //     ),
+                      //   ),
+                      // );
                     },
                   ),
                 ),
