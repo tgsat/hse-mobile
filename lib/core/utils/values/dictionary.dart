@@ -62,6 +62,7 @@ class Dictionary {
   // M
   static const String media = 'Media';
   static const String masyarakat_umum = 'Masyarakat Umum';
+  static const String meeting = 'Meeting';
   // N
   static const String nama = 'Nama';
   static const String nama_perusahaan = 'Nama Perusahaan';

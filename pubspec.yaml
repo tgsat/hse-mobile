@@ -50,8 +50,8 @@ dependencies:
   # Cupertino
   cupertino_icons: ^1.0.2
   # Firebase Auth
-  firebase_core: 
-  firebase_auth: 
+  # firebase_core: 
+  # firebase_auth: 
   # google_sign_in: 
   # flutter_facebook_auth: 
   # Linkedin 
@@ -68,7 +68,8 @@ dependencies:
   path_provider: 
   # Open File
   open_file: ^3.2.1
-
+  # Translate
+  easy_localization: ^3.0.0
 
 
 dev_dependencies:
@@ -89,6 +90,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/translations/
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

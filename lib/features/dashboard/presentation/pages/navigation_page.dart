@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hse_product/core/utils/translations/locale_keys.g.dart';
 import 'package:hse_product/features/dashboard/presentation/pages/dashboard_page.dart';
+import 'package:hse_product/features/meeting/presentation/pages/meeting_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:hse_product/core/utils/values/color_config.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/features/profile/presentation/pages/profile_page.dart';
-import 'package:hse_product/features/project/presentation/pages/project_page.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({Key? key}) : super(key: key);
@@ -20,7 +22,7 @@ class _NavigationPageState extends State<NavigationPage> {
   List<Widget> _buildScreens() {
     return [
       DashboardPage(),
-      ProfilePage(),
+      MeetingPage(),
       ProfilePage(),
     ];
   }
@@ -34,8 +36,8 @@ class _NavigationPageState extends State<NavigationPage> {
         inactiveColorPrimary: ColorConfig.disableColor,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.assignment),
-        title: (Dictionary.info_proyek),
+        icon: Icon(Icons.calendar_today),
+        title: (LocaleKeys.meeting.tr()),
         activeColorPrimary: ColorConfig.primaryColor,
         inactiveColorPrimary: ColorConfig.disableColor,
       ),

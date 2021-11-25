@@ -17,7 +17,7 @@ appBarPrimary(BuildContext context, {required String title}) {
       Container(
         margin: EdgeInsets.only(right: SizeConfig.marginActivity),
         child: Image.asset(
-          'assets/images/ico_wish.png',
+          'assets/images/logo_qhse.png',
           width: 40,
         ),
       )

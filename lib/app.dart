@@ -5,6 +5,7 @@ import 'package:hse_product/features/splash/presentation/pages/splash_page.dart'
 import 'core/utils/helpers/navigation_service.dart';
 import 'core/utils/values/theme_config.dart';
 import 'di/injection_container.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class App extends StatelessWidget {
   @override
@@ -15,6 +16,9 @@ class App extends StatelessWidget {
       theme: ThemeConfig.primaryTheme,
       home: SplashPage(),
       navigatorKey: sl<NavigationService>().navigatorKey,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       onGenerateRoute: (routeSettings) {
         switch (routeSettings.name) {
           case '/LOGIN':

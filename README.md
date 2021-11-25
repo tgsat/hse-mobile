@@ -11,6 +11,12 @@ A few resources to get you started if this is your first Flutter project:
 - [Web Version](https://wish.pragmainf.tech/)
 - Credential: Google
 
+## Generate Easy Localization 
+- flutter pub run easy_localization:generate -S "assets/translations" -O "lib/core/utils/translations"
+- flutter pub run easy_localization:generate -S "assets/translations" -O "lib/core/utils/translations" -o "locale_keys.g.dart" -f keys
+
+
+
 ## Versioning Name
 
 - Versioning: Major.Minor.Patch [Semantic Versioning](https://semver.org/)
