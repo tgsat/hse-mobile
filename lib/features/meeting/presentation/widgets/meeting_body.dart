@@ -64,8 +64,12 @@ class MeetingBody extends StatelessWidget {
                   vertical: 4.0,
                 ),
                 decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(SizeConfig.radiusCard),
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                  borderRadius: BorderRadius.circular(
+                    SizeConfig.radiusCard,
+                  ),
                 ),
                 child: ListTile(
                   onTap: () {
