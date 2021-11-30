@@ -4,7 +4,9 @@ import 'package:hse_product/core/utils/values/size_config.dart';
 class TextFeldGeneral extends StatefulWidget {
   final String? label;
   final String? hint;
-
+  final Color? hintStyle;
+  final double? hintSize;
+  final EdgeInsetsGeometry? contenPadding;
   final TextEditingController? controller;
   final bool isEnable;
   final bool isRequired;
@@ -13,11 +15,16 @@ class TextFeldGeneral extends StatefulWidget {
   final TextInputType inputType;
   final String? initialValue;
   final Widget? sufix;
+  final Widget? sufixIcon;
+  final Color? borderSide;
 
   const TextFeldGeneral({
     Key? key,
     this.label,
     this.hint,
+    this.hintStyle,
+    this.hintSize,
+    this.contenPadding,
     this.controller,
     this.isEnable = true,
     this.isRequired = true,
@@ -26,6 +33,8 @@ class TextFeldGeneral extends StatefulWidget {
     this.inputType = TextInputType.text,
     this.initialValue,
     this.sufix,
+    this.sufixIcon,
+    this.borderSide,
   }) : super(key: key);
 
   @override
@@ -42,22 +51,27 @@ class _TextFeldGeneralState extends State<TextFeldGeneral> {
         enabled: widget.isEnable,
         initialValue: widget.initialValue,
         decoration: InputDecoration(
+          isDense: true,
+          contentPadding: widget.contenPadding,
           suffix: widget.sufix,
+          suffixIcon: widget.sufixIcon,
           hintText: widget.hint ?? widget.label,
           labelText: widget.label,
           labelStyle: TextStyle(color: Colors.grey),
-          hintStyle: TextStyle(color: Colors.grey),
+          hintStyle: TextStyle(
+              color: widget.hintStyle ?? Colors.grey,
+              fontSize: widget.hintSize ?? SizeConfig.textSizeSmall),
           border: InputBorder.none,
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey),
+            borderSide: BorderSide(color: widget.borderSide ?? Colors.grey),
             borderRadius: BorderRadius.circular(8),
           ),
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey),
+            borderSide: BorderSide(color: widget.borderSide ?? Colors.grey),
             borderRadius: BorderRadius.circular(8),
           ),
           disabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey),
+            borderSide: BorderSide(color: widget.borderSide ?? Colors.grey),
             borderRadius: BorderRadius.circular(8),
           ),
           focusedErrorBorder: OutlineInputBorder(

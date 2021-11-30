@@ -5,6 +5,8 @@ class Dictionary {
   static const String alamat_email = 'Alamat Email';
   static const String alamat_email_pemilik = 'Alamat Email Pemilik';
   static const String all = 'All';
+  static const String audit = 'Audit';
+  static const String detail_audit = 'Detail Audit';
 
   // B
   static const String badan_usaha = 'Badan Usaha';
@@ -14,9 +16,13 @@ class Dictionary {
 
   // C
   static const String close = 'Close';
+  static const String comunication = 'Comunication';
+  static const String detail_comunication = 'Detail Comunication';
   static const String csr_waskita = 'CSR Waskita';
   // D
   static const String dashboard = 'Dashboard';
+  static const String detail_document_qhse = 'Detail Document QHSE';
+  static const String document_qhse = 'Document QHSE';
   static const String deskripsi_keluhan_anda = 'Deskripsi Keluhan Anda';
   static const String deskripsi_saran_anda = 'Deskripsi Saran Anda';
   static const String deskripsi_harapan_anda = 'Deskripsi Harapan Anda';
@@ -30,8 +36,12 @@ class Dictionary {
   // F
   // G
   // H
+  static const String detail_hse_plan = 'Detail HSE Plan';
+  static const String hse_plan = 'HSE Plan';
   // I
   static const String info_proyek = 'Info Proyek';
+  static const String inspection = 'Inspection';
+  static const String detail_inspection = 'Detail Inspection';
   static const String info_proyek_yad = 'Info Proyek YAD';
   static const String info_umum = 'Info Umum';
   static const String instansi_pemerintah = 'Instansi Pemerintah';
@@ -81,17 +91,20 @@ class Dictionary {
 
   // Q
   // R
+  static const String risk_asessment = 'Risk Asessment';
+  static const String detail_risk_asessment = 'Detail Risk Asessment';
+  // s
   static const String suara_stakeholder = 'Suara Stake Holder';
   static const String stakeholder = 'Stake Holder';
-
-  // S
   static const String submit = 'Submit';
   static const String status = 'Status';
+  static const String search = 'Search';
 
   // T
   static const String tipe_komunikasi = 'Tipe Komunikasi';
   static const String tulis_jabatan = 'Tulis Jabatan';
   static const String tahun = 'Tahun';
+  static const String training = 'Training';
 
   // U
   static const String usia = 'Usia';
