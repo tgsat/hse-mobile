@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hse_product/core/presentation/widgets/app_bars/app_bar_white.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
+import 'package:hse_product/features/risk_asessment/presentation/widgets/combo_filter.dart';
 
 class RiskAsessmentPage extends StatelessWidget {
   const RiskAsessmentPage({Key? key}) : super(key: key);
@@ -15,7 +16,9 @@ class RiskAsessmentPage extends StatelessWidget {
             vertical: SizeConfig.marginActivity,
             horizontal: SizeConfig.marginActivity),
         child: Column(
-          children: [],
+          children: [
+            ComboFilterRiskAsessment(),
+          ],
         ),
       ),
     );

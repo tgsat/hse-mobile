@@ -3,10 +3,15 @@ import 'package:hse_product/core/utils/values/color_config.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String? label;
+  final Color? iColor;
   final Function()? onPress;
 
-  const PrimaryButton({Key? key, @required this.label, this.onPress})
-      : super(key: key);
+  const PrimaryButton({
+    Key? key,
+    @required this.label,
+    this.iColor,
+    this.onPress,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -20,7 +25,10 @@ class PrimaryButton extends StatelessWidget {
       ),
       child: Text(
         label ?? '',
-        style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+        style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.bold,
+            color: iColor ?? Colors.black),
       ),
       onPressed: onPress,
     );

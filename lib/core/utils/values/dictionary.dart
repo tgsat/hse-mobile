@@ -53,9 +53,11 @@ class Dictionary {
   // J
   static const String jabatan = 'Jabatan';
   static const String jenis_proyek_konstruksi = 'Jenis Proyek Konstruksi';
+  static const String jl_ = 'Jl.Bumi Panyawangan';
 
   // K
   static const String kriteria = 'Kriteria';
+  static const String keluar = 'Keluar';
   static const String kriteria_stakeholder = 'Kriteria Stakeholder';
 
   // L
@@ -84,6 +86,7 @@ class Dictionary {
   // O
   // P
   static const String profile = 'Profile';
+  static const String edit_profile = 'Edit Profile';
   static const String pilih_kriteria = 'Pilih Kriteria';
   static const String pelaksanaan_proyek_waskita = 'Pelaksanaan Proyek Waskita';
   static const String perkiraan_waktu_lelang =
@@ -109,6 +112,9 @@ class Dictionary {
   // U
   static const String usia = 'Usia';
   static const String umum = 'Umum';
+  static const String ubah_profile = 'Ubah Profile';
+  static const String ubah_password = 'Ubah Password';
+  static const String user_pragma = 'User Pragma';
   static const String upload_bukti_evidence =
       'Upload Bukti / Evidence (Foto, Video, Scan, File, dll)';
 

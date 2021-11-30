@@ -3,9 +3,11 @@ import 'package:hse_product/core/presentation/widgets/text_fields/text_field_gen
 import 'package:hse_product/core/utils/values/color_config.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
 
-class ComboFilterAudit extends StatelessWidget {
-  final searchCont = TextEditingController();
-  var _statusFilter = ["Approved", "OnProses", "Reject"];
+class ComboFilterRiskAsessment extends StatelessWidget {
+  final noRegisterCont = TextEditingController();
+  final headerCont = TextEditingController();
+  var proyekFilter = ["D301-15241", "D301-15242", "D301-15243"];
+  DateTime? selectedCont;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +29,9 @@ class ComboFilterAudit extends StatelessWidget {
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: TextFeldGeneral(
-                  hint: Dictionary.search,
+                  hint: 'Register',
                   hintStyle: Colors.grey[600],
-                  controller: searchCont,
+                  controller: noRegisterCont,
                   borderSide: Colors.transparent,
                   inputType: TextInputType.text,
                   isEnable: true,
@@ -55,8 +57,8 @@ class ComboFilterAudit extends StatelessWidget {
                   underline: Container(),
                   isExpanded: true,
                   // value: _value,
-                  hint: Text('Status', style: TextStyle(fontSize: 14.0)),
-                  items: _statusFilter.map((String value) {
+                  hint: Text('Proyek', style: TextStyle(fontSize: 14.0)),
+                  items: proyekFilter.map((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(value),
@@ -72,6 +74,30 @@ class ComboFilterAudit extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+          SizedBox(width: 8),
+          Expanded(
+            child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 5,
+                    ),
+                  ],
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: TextFeldGeneral(
+                  hint: 'Judul',
+                  hintStyle: Colors.grey[600],
+                  controller: headerCont,
+                  borderSide: Colors.transparent,
+                  inputType: TextInputType.text,
+                  isEnable: true,
+                  contenPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                )),
           ),
           SizedBox(width: 8),
           Container(

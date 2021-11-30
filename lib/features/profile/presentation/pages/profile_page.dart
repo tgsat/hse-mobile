@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hse_product/core/presentation/widgets/app_bars/app_bar_primary.dart';
-import 'package:hse_product/core/presentation/widgets/buttons/button_primary.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
-import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:hse_product/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:hse_product/features/profile/presentation/widgets/body_profile.dart';

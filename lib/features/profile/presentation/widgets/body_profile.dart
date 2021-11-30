@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hse_product/core/presentation/widgets/buttons/button_primary.dart';
 import 'package:hse_product/core/presentation/widgets/shimmers/shimmer_list_vertical.dart';
+import 'package:hse_product/core/utils/values/color_config.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:hse_product/features/profile/presentation/bloc/profile_bloc.dart';
+import 'package:hse_product/features/profile/presentation/widgets/item_row_profile.dart';
+import 'package:hse_product/features/profile/presentation/widgets/ubah_profile.dart';
 import 'package:hse_product/features/splash/presentation/pages/splash_page.dart';
 
 import 'display_data.dart';
@@ -46,11 +49,27 @@ class _BodyProfileState extends State<BodyProfile> {
               },
             ),
             SizedBox(height: 20),
-            Container(
-              width: double.infinity,
-              child: PrimaryButton(
-                label: Dictionary.log_out,
-                onPress: () {
+            itemProfile('assets/images/businessman.png'),
+            SizedBox(height: 10),
+            itemRowProfile(context, Dictionary.user_pragma,
+                'assets/images/location.png', Dictionary.jl_, 'V.1.0'),
+            SizedBox(height: 60),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => EditProfilePage()));
+              },
+              child: itemRowBodyProfile(context,
+                  'assets/images/edit_profile.png', Dictionary.edit_profile),
+            ),
+            InkWell(
+                onTap: () {},
+                child: itemRowBodyProfile(
+                    context,
+                    'assets/images/change_password.png',
+                    Dictionary.ubah_password)),
+            InkWell(
+                onTap: () {
                   showDialog(
                     context: context,
                     builder: (context) {
@@ -75,8 +94,9 @@ class _BodyProfileState extends State<BodyProfile> {
                     },
                   );
                 },
-              ),
-            ),
+                child: itemRowBodyProfile(
+                    context, 'assets/images/log_out.png', Dictionary.keluar)),
+            SizedBox(height: 20),
           ],
         ),
       ),
