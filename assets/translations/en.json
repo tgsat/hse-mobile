@@ -1,4 +1,23 @@
 {
     "meeting": "Meeting",
-    "field_email_format": "Field Email Required"
+    "field_email_format": "Field Email Required",
+    "induction": "Induction",
+    "hse_plan": "HSE Plan",
+    "dokument_qhse": "HSE Document",
+    "communication": "Communication",
+    "inspection": "Inspection",
+    "audit": "Audit",
+    "risk_asessment": "Risk Assestment",
+    "incident": "Insiden",
+    "near_miss": "Near Miss",
+    "hazard": "Bahaya",
+    "fresh_eye": "Fresh Eye",
+    "training": "Pelatihan",
+    "work_permit": "Izin Kerja",
+    "statistics": "Statistik",
+    "search": "Search",
+    "status": "Status",
+    "title": "Title",
+    "start_date": "Start Date",
+    "end_date": "End Date"
 }

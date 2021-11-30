@@ -1,4 +1,23 @@
 {
     "meeting": "Pertemuan",
-    "field_email_format": "Kolom ini harus berformat email"
+    "field_email_format": "Kolom ini harus berformat email",
+    "induction": "Induksi",
+    "hse_plan": "Rencana HSE",
+    "dokument_qhse": "Dokumen HSE",
+    "communication": "Komunikasi",
+    "inspection": "Inspeksi",
+    "audit": "Audit",
+    "risk_asessment": "Risk Assessment",
+    "incident": "Incident",
+    "near_miss": "Near Miss",
+    "hazard": "Hazaard",
+    "fresh_eye": "Fresh Eye",
+    "training": "Training",
+    "work_permit": "Work Permit",
+    "statistics": "Statistics",
+    "search": "Cari",
+    "status": "Status",
+    "title": "Judul",
+    "start_date": "Tanggal Mulai",
+    "end_date": "Tanggal Selesai"
 }

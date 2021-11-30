@@ -70,6 +70,8 @@ dependencies:
   open_file: ^3.2.1
   # Translate
   easy_localization: ^3.0.0
+  # Calendar
+  table_calendar: ^3.0.3
   # SVG
   flutter_svg: any
   # PDF

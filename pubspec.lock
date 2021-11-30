@@ -448,6 +448,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
+  simple_gesture_detector:
+    dependency: transitive
+    description:
+      name: simple_gesture_detector
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -487,42 +494,49 @@ packages:
       name: syncfusion_flutter_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "19.3.55"
+    version: "19.3.56"
   syncfusion_flutter_pdf:
     dependency: transitive
     description:
       name: syncfusion_flutter_pdf
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "19.3.55-beta"
+    version: "19.3.56-beta"
   syncfusion_flutter_pdfviewer:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_pdfviewer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "19.3.55-beta"
+    version: "19.3.56-beta"
   syncfusion_flutter_pdfviewer_macos:
     dependency: transitive
     description:
       name: syncfusion_flutter_pdfviewer_macos
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "19.3.55-beta"
+    version: "19.3.56-beta"
   syncfusion_flutter_pdfviewer_platform_interface:
     dependency: transitive
     description:
       name: syncfusion_flutter_pdfviewer_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "19.3.55-beta"
+    version: "19.3.56-beta"
   syncfusion_flutter_pdfviewer_web:
     dependency: transitive
     description:
       name: syncfusion_flutter_pdfviewer_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "19.3.55-beta"
+    version: "19.3.56-beta"
+  table_calendar:
+    dependency: "direct main"
+    description:
+      name: table_calendar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.3"
   term_glyph:
     dependency: transitive
     description:
