@@ -7,6 +7,7 @@ import 'package:hse_product/features/hse_plan/presentation/pages/hse_plan_page.d
 import 'package:hse_product/features/dashboard/presentation/widgets/menu_card_dashboard.dart';
 import 'package:hse_product/core/utils/translations/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:hse_product/features/induction/presentation/pages/induction_page.dart';
 import 'package:hse_product/features/inspection/presentation/pages/inspection_page.dart';
 import 'package:hse_product/features/risk_asessment/presentation/pages/risk_asessment_page.dart';
 
@@ -102,7 +103,12 @@ class _DashboardPageState extends State<DashboardPage> {
               assets: "assets/images/hazard.png",
             ),
             MenuCardDashboard(
-              press: () {},
+              press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => InductionPage()));
+              },
               title: LocaleKeys.induction.tr(),
               assets: "assets/images/induction.png",
             ),

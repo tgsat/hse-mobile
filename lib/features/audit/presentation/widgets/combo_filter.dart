@@ -16,26 +16,27 @@ class ComboFilterAudit extends StatelessWidget {
           Expanded(
             child: GestureDetector(
               child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 5,
-                      ),
-                    ],
-                  ),
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: TextFeldGeneral(
-                    hint: Dictionary.search,
-                    hintStyle: Colors.grey[600],
-                    controller: searchCont,
-                    borderSide: Colors.transparent,
-                    inputType: TextInputType.text,
-                    isEnable: true,
-                    contenPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                  )),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 5,
+                    ),
+                  ],
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: TextFeldGeneral(
+                  hint: Dictionary.search,
+                  hintStyle: Colors.grey[600],
+                  controller: searchCont,
+                  borderSide: Colors.transparent,
+                  inputType: TextInputType.text,
+                  isEnable: true,
+                  contenPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                ),
+              ),
             ),
           ),
           SizedBox(width: 8),

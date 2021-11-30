@@ -6,7 +6,6 @@ import 'package:hse_product/core/presentation/blocs/single_attachment_bloc/singl
 import 'package:hse_product/core/presentation/widgets/shimmers/shimmer_card.dart';
 import 'package:hse_product/core/presentation/widgets/text_fields/text_field_general.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
-import 'package:hse_product/core/utils/values/size_config.dart';
 
 class SingleAttachments extends StatefulWidget {
   final Function(File fileUploaded)? onSuccess;
