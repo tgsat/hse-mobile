@@ -49,7 +49,7 @@ class BodyLogin extends StatelessWidget {
                 Container(
                   width: SizeConfig.maxWidth(context),
                   child: ButtonLogin(
-                    // 'assets/images/ico_google.png',
+                    iconAssets: 'assets/images/google.png',
                     label: Dictionary.login_with_google.toUpperCase(),
                     onPress: () {
                       Navigator.push(
@@ -64,7 +64,7 @@ class BodyLogin extends StatelessWidget {
                 Container(
                   width: SizeConfig.maxWidth(context),
                   child: ButtonLogin(
-                    // iconAssets: 'assets/images/ico_fb.png',
+                    iconAssets: 'assets/images/facebook.png',
                     label: Dictionary.login_with_fb.toUpperCase(),
                     onPress: () {
                       // _bloc..add(LoginFacebookStarted());
@@ -75,7 +75,7 @@ class BodyLogin extends StatelessWidget {
                 Container(
                   width: SizeConfig.maxWidth(context),
                   child: ButtonLogin(
-                    // iconAssets: 'assets/images/ico_linkedin.png',
+                    iconAssets: 'assets/images/linkedin.png',
                     label: Dictionary.login_with_linkedin.toUpperCase(),
                     onPress: () {
                       // Navigator.push(

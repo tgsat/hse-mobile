@@ -30,8 +30,8 @@ class _NavigationPageState extends State<NavigationPage> {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.domain),
-        title: (Dictionary.stakeholder),
+        icon: Icon(Icons.dashboard),
+        title: (Dictionary.dashboard),
         activeColorPrimary: ColorConfig.primaryColor,
         inactiveColorPrimary: ColorConfig.disableColor,
       ),

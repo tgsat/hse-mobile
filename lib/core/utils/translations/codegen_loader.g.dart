@@ -48,7 +48,7 @@ class CodegenLoader extends AssetLoader {
     "fresh_eye": "Mata Segar",
     "training ": "Pelatihan",
     "work_permit": "Izin Kerja",
-    "statistics": "statistik",
+    "statistics": "Statistik",
   };
   static const Map<String, Map<String, dynamic>> mapLocales = {
     "en": en,
