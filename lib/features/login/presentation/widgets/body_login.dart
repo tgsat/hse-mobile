@@ -20,9 +20,15 @@ class BodyLogin extends StatefulWidget {
 
 class _BodyLoginState extends State<BodyLogin> {
   GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
-
   final _emailCont = new TextEditingController();
   final _passwordCont = new TextEditingController();
+  bool _obscureText = true;
+  void _toggle() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final _bloc = BlocProvider.of<LoginBloc>(context);
@@ -107,7 +113,6 @@ class _BodyLoginState extends State<BodyLogin> {
             ),
             Container(
                 width: SizeConfig.maxWidth(context),
-                height: SizeConfig.maxHeight(context),
                 margin: EdgeInsets.symmetric(
                     vertical: SizeConfig.marginActivity,
                     horizontal: SizeConfig.marginActivity),
@@ -120,22 +125,31 @@ class _BodyLoginState extends State<BodyLogin> {
                       ],
                     ),
                     TextFeldGeneral(
+                      prefixIcon: Icon(Icons.person),
                       hint: Dictionary.email,
                       label: Dictionary.email,
                       hintStyle: Colors.grey[600],
                       controller: _emailCont,
-                      inputType: TextInputType.text,
+                      inputType: TextInputType.emailAddress,
                       isEnable: true,
                       isValidateEmail: true,
                     ),
                     TextFeldGeneral(
+                      prefixIcon: Icon(Icons.lock),
                       hint: Dictionary.password,
                       label: Dictionary.password,
                       hintStyle: Colors.grey[600],
                       controller: _passwordCont,
                       inputType: TextInputType.text,
                       isEnable: true,
-                      isValidateEmail: true,
+                      sufixIcon: InkWell(
+                        onTap: _toggle,
+                        child: Icon(
+                          _obscureText
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                        ),
+                      ),
                     ),
                     SizedBox(height: 40),
                     Container(

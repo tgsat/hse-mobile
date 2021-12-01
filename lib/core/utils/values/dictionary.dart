@@ -43,6 +43,8 @@ class Dictionary {
   // I
   static const String info_proyek = 'Info Proyek';
   static const String inspection = 'Inspection';
+  static const String incident = 'Incident';
+  static const String detail_incident = 'Detail_Incident';
   static const String detail_inspection = 'Detail Inspection';
   static const String info_proyek_yad = 'Info Proyek YAD';
   static const String info_umum = 'Info Umum';
