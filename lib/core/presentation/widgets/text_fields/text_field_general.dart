@@ -16,6 +16,7 @@ class TextFeldGeneral extends StatefulWidget {
   final String? initialValue;
   final Widget? sufix;
   final Widget? sufixIcon;
+  final Widget? prefixIcon;
   final Color? borderSide;
 
   const TextFeldGeneral({
@@ -34,6 +35,7 @@ class TextFeldGeneral extends StatefulWidget {
     this.initialValue,
     this.sufix,
     this.sufixIcon,
+    this.prefixIcon,
     this.borderSide,
   }) : super(key: key);
 
@@ -55,6 +57,7 @@ class _TextFeldGeneralState extends State<TextFeldGeneral> {
           contentPadding: widget.contenPadding,
           suffix: widget.sufix,
           suffixIcon: widget.sufixIcon,
+          prefixIcon: widget.prefixIcon,
           hintText: widget.hint ?? widget.label,
           labelText: widget.label,
           labelStyle: TextStyle(color: Colors.grey),

@@ -5,8 +5,10 @@ class Dictionary {
   static const String alamat_email = 'Alamat Email';
   static const String alamat_email_pemilik = 'Alamat Email Pemilik';
   static const String all = 'All';
+  static const String atau_masuk_tanpa_identitas = 'Atau Masuk Tanpa Identitas';
   static const String audit = 'Audit';
   static const String detail_audit = 'Detail Audit';
+  static const String anonymous = 'Anonymous';
 
   // B
   static const String badan_usaha = 'Badan Usaha';
@@ -67,6 +69,8 @@ class Dictionary {
   static const String lainnya_sebutkan = 'Lainnya (Sebutkan)';
   static const String lainnya = 'Lainnya';
   static const String log_out = 'Log Out';
+  static const String login = 'Login';
+  static const String log_in = 'Log in';
   static const String lokasi_proyek_konstruksi = 'Lokasi Proyek Konstruksi';
   static const String lingkungan_dan_sosial = 'Lingkungan Dan Sosial';
   static const String lokasi = 'Lokasi';
@@ -86,6 +90,8 @@ class Dictionary {
   // O
   // P
   static const String profile = 'Profile';
+  static const String pt_nindaya_karya = 'PT. Nindya Karya';
+  static const String password = 'Password';
   static const String edit_profile = 'Edit Profile';
   static const String pilih_kriteria = 'Pilih Kriteria';
   static const String pelaksanaan_proyek_waskita = 'Pelaksanaan Proyek Waskita';
@@ -93,6 +99,7 @@ class Dictionary {
       'Perkiraan Waktu Lelang/Dibangun';
 
   // Q
+  static const String quality = 'Quality Health & Safety Environment System';
   // R
   static const String risk_asessment = 'Risk Asessment';
   static const String detail_risk_asessment = 'Detail Risk Asessment';

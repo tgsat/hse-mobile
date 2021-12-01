@@ -14,6 +14,7 @@ class SizeConfig {
   static const double marginCard = 2.0;
 
   static const double radiusCard = 8.0;
+  static const double radiusMenuImages = 35;
 
   static const double imageCardNewsSize = 103;
 

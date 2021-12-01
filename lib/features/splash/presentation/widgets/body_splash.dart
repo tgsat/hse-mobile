@@ -5,8 +5,9 @@ class BodySplash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset('assets/images/ico_wish.png'),
-    );
+    return Container();
+    // Center(
+    //   child: Image.asset('assets/images/ico_wish.png'),
+    // );
   }
 }
