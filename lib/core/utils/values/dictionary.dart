@@ -76,6 +76,7 @@ class Dictionary {
   static const String lokasi_proyek_konstruksi = 'Lokasi Proyek Konstruksi';
   static const String lingkungan_dan_sosial = 'Lingkungan Dan Sosial';
   static const String lokasi = 'Lokasi';
+  static const String lorem_ipsum = 'lorem Ipsum';
 
   // M
   static const String media = 'Media';

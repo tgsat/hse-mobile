@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hse_product/features/hse_plan/presentation/widgets/item_two_row_start.dart';
+import 'package:hse_product/core/presentation/widgets/item_two/item_two_row_start.dart';
 import 'package:hse_product/features/inspection/presentation/widgets/item_card_list.dart';
 
 class ItemDataInspection extends StatelessWidget {

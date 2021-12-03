@@ -3,13 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hse_product/core/presentation/widgets/buttons/button_primary.dart';
 import 'package:hse_product/core/presentation/widgets/component/custom_clipper.dart';
 import 'package:hse_product/core/presentation/widgets/text_fields/text_field_general.dart';
+import 'package:hse_product/core/utils/translations/locale_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:hse_product/core/utils/values/color_config.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/dashboard/presentation/pages/navigation_page.dart';
+import 'package:hse_product/features/forget_password/presentation/pages/forget_password.dart';
 import 'package:hse_product/features/login/presentation/bloc/login_bloc.dart';
-import 'package:hse_product/features/login/presentation/widgets/separator_text.dart';
-// import 'linkedin_form.dart';
 
 class BodyLogin extends StatefulWidget {
   const BodyLogin({Key? key}) : super(key: key);
@@ -32,7 +33,6 @@ class _BodyLoginState extends State<BodyLogin> {
   @override
   Widget build(BuildContext context) {
     final _bloc = BlocProvider.of<LoginBloc>(context);
-
     return SafeArea(
       child: SingleChildScrollView(
           child: Form(
@@ -68,9 +68,7 @@ class _BodyLoginState extends State<BodyLogin> {
                   child: Container(
                     child: Column(
                       children: <Widget>[
-                        SizedBox(
-                          height: 40,
-                        ),
+                        SizedBox(height: 40),
                         Material(
                             elevation: 8.0,
                             shape: CircleBorder(),
@@ -81,25 +79,28 @@ class _BodyLoginState extends State<BodyLogin> {
                                   child: buildLogo()),
                               radius: 50.0,
                             )),
-                        SizedBox(
-                          height: 15,
-                        ),
+                        SizedBox(height: 10),
                         Center(
-                          child: Text(Dictionary.quality,
+                          child: Text(
+                              LocaleKeys
+                                  .quality_health_safety_environment_system
+                                  .tr(),
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline6!
-                                  .apply(color: Colors.white)),
+                                  .subtitle2!
+                                  .apply(color: Colors.white),
+                              textAlign: TextAlign.center),
                         ),
                         Center(
                           child: Text(
                             Dictionary.pt_nindaya_karya,
                             style: Theme.of(context)
                                 .textTheme
-                                .headline6!
+                                .subtitle2!
                                 .apply(color: Colors.white),
                           ),
                         ),
+                        SizedBox(height: 20),
                       ],
                     ),
                     width: double.infinity,
@@ -120,7 +121,7 @@ class _BodyLoginState extends State<BodyLogin> {
                   children: [
                     Row(
                       children: [
-                        Text(Dictionary.log_in,
+                        Text(LocaleKeys.login.tr(),
                             style: Theme.of(context).textTheme.headline6)
                       ],
                     ),
@@ -146,27 +147,17 @@ class _BodyLoginState extends State<BodyLogin> {
                         onTap: _toggle,
                         child: Icon(
                           _obscureText
-                              ? Icons.visibility
-                              : Icons.visibility_off,
+                              ? Icons.visibility_off
+                              : Icons.visibility,
                         ),
                       ),
                     ),
-                    SizedBox(height: 40),
+                    SizedBox(height: 30),
                     Container(
                       width: double.infinity,
                       child: PrimaryButton(
-                        label: Dictionary.login,
+                        label: LocaleKeys.login.tr(),
                         iColor: Colors.white,
-                      ),
-                    ),
-                    sparatorCenterText(
-                        context, Dictionary.atau_masuk_tanpa_identitas),
-                    Container(
-                      width: double.infinity,
-                      child: PrimaryButton(
-                        label: Dictionary.anonymous,
-                        iColor: Colors.white,
-                        backgroundColor: Colors.blueAccent,
                         onPress: () {
                           Navigator.push(
                               context,
@@ -174,7 +165,18 @@ class _BodyLoginState extends State<BodyLogin> {
                                   builder: (context) => NavigationPage()));
                         },
                       ),
-                    )
+                    ),
+                    SizedBox(height: 20),
+                    InkWell(
+                      child: Text((LocaleKeys.foget_password.tr()),
+                          style: Theme.of(context).textTheme.bodyText2),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ForgetPassword()));
+                      },
+                    ),
                   ],
                 )),
           ],

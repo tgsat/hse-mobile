@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hse_product/core/presentation/widgets/text_fields/text_field_general.dart';
 import 'package:hse_product/core/utils/values/color_config.dart';
-import 'package:hse_product/core/utils/values/dictionary.dart';
 
 class ComboFilterRiskAsessment extends StatelessWidget {
   final noRegisterCont = TextEditingController();

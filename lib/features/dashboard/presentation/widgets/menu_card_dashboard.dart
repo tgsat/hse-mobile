@@ -5,11 +5,13 @@ class MenuCardDashboard extends StatelessWidget {
   final Function() press;
   final String title;
   final String assets;
+  final double withAsset;
   const MenuCardDashboard(
       {Key? key,
       required this.press,
       required this.title,
-      required this.assets})
+      required this.assets,
+      required this.withAsset})
       : super(key: key);
 
   @override

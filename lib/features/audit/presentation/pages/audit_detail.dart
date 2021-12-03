@@ -3,7 +3,7 @@ import 'package:hse_product/core/presentation/widgets/app_bars/app_bar_white.dar
 import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/audit/presentation/widgets/item_data_audit.dart';
-import 'package:hse_product/features/inspection/presentation/widgets/item_two_column.dart';
+import 'package:hse_product/core/presentation/widgets/item_two/item_two_column.dart';
 
 class AuditDetailPage extends StatefulWidget {
   const AuditDetailPage({Key? key}) : super(key: key);

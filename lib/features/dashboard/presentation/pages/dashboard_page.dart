@@ -10,6 +10,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:hse_product/features/incident/presentation/pages/incident_page.dart';
 import 'package:hse_product/features/induction/presentation/pages/induction_page.dart';
 import 'package:hse_product/features/inspection/presentation/pages/inspection_page.dart';
+import 'package:hse_product/features/near_miss/presentation/pages/near_miss_page.dart';
 import 'package:hse_product/features/risk_asessment/presentation/pages/risk_asessment_page.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -41,6 +42,7 @@ class _DashboardPageState extends State<DashboardPage> {
               },
               title: LocaleKeys.hse_plan.tr(),
               assets: "assets/images/planner.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {
@@ -51,6 +53,7 @@ class _DashboardPageState extends State<DashboardPage> {
               },
               title: LocaleKeys.dokument_qhse.tr(),
               assets: "assets/images/documents.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {
@@ -61,6 +64,7 @@ class _DashboardPageState extends State<DashboardPage> {
               },
               title: LocaleKeys.communication.tr(),
               assets: "assets/images/comunication.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {
@@ -69,6 +73,7 @@ class _DashboardPageState extends State<DashboardPage> {
               },
               title: LocaleKeys.inspection.tr(),
               assets: "assets/images/inspection.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {
@@ -77,6 +82,7 @@ class _DashboardPageState extends State<DashboardPage> {
               },
               title: LocaleKeys.audit.tr(),
               assets: "assets/images/audit.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {
@@ -87,6 +93,7 @@ class _DashboardPageState extends State<DashboardPage> {
               },
               title: LocaleKeys.risk_asessment.tr(),
               assets: "assets/images/risk_asessment.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {
@@ -95,16 +102,22 @@ class _DashboardPageState extends State<DashboardPage> {
               },
               title: LocaleKeys.incident.tr(),
               assets: "assets/images/incident.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
-              press: () {},
+              press: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NearMissPage()));
+              },
               title: LocaleKeys.near_miss.tr(),
               assets: "assets/images/near_miss.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {},
               title: LocaleKeys.hazard.tr(),
               assets: "assets/images/hazard.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {
@@ -113,31 +126,37 @@ class _DashboardPageState extends State<DashboardPage> {
               },
               title: LocaleKeys.induction.tr(),
               assets: "assets/images/induction.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {},
               title: LocaleKeys.fresh_eye.tr(),
               assets: "assets/images/fresh_eye.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {},
               title: LocaleKeys.training.tr(),
               assets: "assets/images/training.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {},
               title: LocaleKeys.work_permit.tr(),
               assets: "assets/images/work_permit.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {},
               title: LocaleKeys.meeting.tr(),
               assets: "assets/images/meeting.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
               press: () {},
               title: LocaleKeys.statistics.tr(),
               assets: "assets/images/statistics.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
           ]),
     );

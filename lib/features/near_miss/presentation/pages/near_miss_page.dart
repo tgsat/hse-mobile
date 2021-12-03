@@ -3,24 +3,23 @@ import 'package:hse_product/core/presentation/widgets/app_bars/app_bar_white.dar
 import 'package:hse_product/core/utils/translations/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
-import 'package:hse_product/features/risk_asessment/presentation/pages/risk_asessment_detail.dart';
-import 'package:hse_product/features/risk_asessment/presentation/widgets/combo_filter.dart';
-import 'package:hse_product/features/risk_asessment/presentation/widgets/item_data_risk_asessment.dart';
+import 'package:hse_product/features/near_miss/presentation/pages/near_miss_detail_page.dart';
+import 'package:hse_product/features/near_miss/presentation/widgets/item_data.dart';
 
-class RiskAsessmentPage extends StatelessWidget {
-  const RiskAsessmentPage({Key? key}) : super(key: key);
+class NearMissPage extends StatelessWidget {
+  const NearMissPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarWhite(LocaleKeys.risk_asessment.tr(), context),
+      appBar: appBarWhite(LocaleKeys.near_miss.tr(), context),
       body: Container(
         margin: EdgeInsets.symmetric(
             vertical: SizeConfig.marginActivity,
             horizontal: SizeConfig.marginActivity),
         child: Column(
           children: [
-            ComboFilterRiskAsessment(),
+            //
             SizedBox(height: 10.0),
             Divider(
               color: Colors.grey.shade100,
@@ -34,10 +33,9 @@ class RiskAsessmentPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                    RiskAsessmentDetailPage()));
+                                builder: (context) => NearMissDetailpage()));
                       },
-                      child: ItemDataRiskAsessment());
+                      child: ItemDataNearMiss());
                 },
               ),
             ),

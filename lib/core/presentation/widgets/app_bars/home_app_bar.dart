@@ -19,7 +19,7 @@ homeAppBar(BuildContext context) => AppBar(
           child: PopupMenuButton(
             child: Row(
               children: [
-                Text('EN', style: TextStyle(color: Colors.black)),
+                Text('ID', style: TextStyle(color: Colors.black)),
                 // SizedBox(width: 5),
                 Icon(
                   Icons.arrow_drop_down_sharp,
@@ -35,7 +35,7 @@ homeAppBar(BuildContext context) => AppBar(
             itemBuilder: (context) {
               return List.generate(1, (index) {
                 return PopupMenuItem(
-                  child: Text('EN'),
+                  child: Text('ID'),
                 );
               });
             },

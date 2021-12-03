@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hse_product/core/presentation/blocs/years_bloc/years_bloc.dart';
 import 'package:hse_product/core/presentation/widgets/dropdowns/dropdown_general.dart';
-import 'package:hse_product/core/presentation/widgets/shimmers/shimmer_list_vertical.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 
