@@ -8,8 +8,7 @@ appBarWhite(String title, BuildContext context) {
     centerTitle: true,
     title: Text(
       title,
-      style: TextStyle(
-          color: Colors.black, fontSize: 15.0, fontWeight: FontWeight.bold),
+      style: Theme.of(context).textTheme.headline6!.apply(color: Colors.black),
     ),
     iconTheme: IconThemeData(
       color: Colors.black, //change your color here

@@ -23,12 +23,6 @@ class _BodyLoginState extends State<BodyLogin> {
   GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
   final _emailCont = new TextEditingController();
   final _passwordCont = new TextEditingController();
-  bool _obscureText = true;
-  void _toggle() {
-    setState(() {
-      _obscureText = !_obscureText;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +73,7 @@ class _BodyLoginState extends State<BodyLogin> {
                                   child: buildLogo()),
                               radius: 50.0,
                             )),
-                        SizedBox(height: 10),
+                        SizedBox(height: 15),
                         Center(
                           child: Text(
                               LocaleKeys
@@ -143,14 +137,7 @@ class _BodyLoginState extends State<BodyLogin> {
                       controller: _passwordCont,
                       inputType: TextInputType.text,
                       isEnable: true,
-                      sufixIcon: InkWell(
-                        onTap: _toggle,
-                        child: Icon(
-                          _obscureText
-                              ? Icons.visibility_off
-                              : Icons.visibility,
-                        ),
-                      ),
+                      isPasswordType: true,
                     ),
                     SizedBox(height: 30),
                     Container(
@@ -166,7 +153,7 @@ class _BodyLoginState extends State<BodyLogin> {
                         },
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 18),
                     InkWell(
                       child: Text((LocaleKeys.foget_password.tr()),
                           style: Theme.of(context).textTheme.bodyText2),

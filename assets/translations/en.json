@@ -36,6 +36,11 @@
     "end_date": "End Date",
     "login": "Login",
     "reset": "Reset",
+    "emergency_response": "Emergency Response",
+    "detail_emergency_response": "Detail Emergency Response",
+    "toolbox_talk": "Toolbox Talk",
+    "detail_toolbox_talk": "Detail Toolbox Talk",
+    "change_password": "Change Password",
     "forget_password": "Forget Password",
     "quality_health_safety_environment_system":
         "Quality Health & Safety Environment System"

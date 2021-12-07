@@ -1,5 +1,24 @@
 import 'package:flutter/material.dart';
 
+itemRow({required String firstRow, required String secondRow}) => Container(
+      margin: EdgeInsets.symmetric(horizontal: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 1,
+            child: Text(firstRow),
+          ),
+          Text(': '),
+          Expanded(
+            flex: 2,
+            child: Text(secondRow),
+          )
+        ],
+      ),
+    );
+
 itemTwoRowsStart(
         String title, String content, String title2, String content2) =>
     Row(
@@ -10,23 +29,25 @@ itemTwoRowsStart(
           flex: 1,
           child: Text(
             title,
-            style: TextStyle(color: Colors.black),
           ),
         ),
         Expanded(
           flex: 2,
-          child: Text(': $content', style: TextStyle(color: Colors.black)),
+          child: Text(
+            ': $content',
+          ),
         ),
         Expanded(
           flex: 1,
           child: Text(
             title2,
-            style: TextStyle(color: Colors.black),
           ),
         ),
         Expanded(
           flex: 2,
-          child: Text(': $content2', style: TextStyle(color: Colors.black)),
+          child: Text(
+            ': $content2',
+          ),
         ),
       ],
     );
@@ -39,7 +60,6 @@ itemTwoColumnStartWithFolder(
       children: [
         Text(
           title,
-          style: TextStyle(color: Colors.black),
         ),
         Row(children: [
           Container(
@@ -55,7 +75,6 @@ itemTwoColumnStartWithFolder(
         ]),
         Text(
           title2,
-          style: TextStyle(color: Colors.black),
         ),
         Row(children: [
           Container(

@@ -16,7 +16,11 @@ class EditProfilePage extends StatefulWidget {
 
 class _EditProfilePageState extends State<EditProfilePage> {
   GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
-  final _searchCont = new TextEditingController();
+  final _nameCont = new TextEditingController();
+  final _emailCont = new TextEditingController();
+  final _hpCont = new TextEditingController();
+  final _jabatanCont = new TextEditingController();
+  final _addressCont = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +35,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   key: _formKey,
                   child: Column(
                     children: [
+                      SizedBox(height: 5),
                       GestureDetector(
                           // onTap: _getImageFromGallery,
                           child: itemProfile('assets/images/businessman.png')),
@@ -44,11 +49,12 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           ),
                           SizedBox(height: 4),
                           Container(
+                              margin: EdgeInsets.symmetric(horizontal: 2),
                               decoration: CustomCard.cardPrimary(),
                               child: TextFeldGeneral(
                                 hint: Dictionary.nama,
                                 hintStyle: Colors.grey[600],
-                                controller: _searchCont,
+                                controller: _nameCont,
                                 borderSide: Colors.transparent,
                                 inputType: TextInputType.text,
                                 isEnable: true,
@@ -67,11 +73,60 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           ),
                           SizedBox(height: 4),
                           Container(
+                              margin: EdgeInsets.symmetric(horizontal: 2),
                               decoration: CustomCard.cardPrimary(),
                               child: TextFeldGeneral(
                                 hint: 'userpragma@gmail.com',
                                 hintStyle: Colors.grey[600],
-                                controller: _searchCont,
+                                controller: _emailCont,
+                                borderSide: Colors.transparent,
+                                inputType: TextInputType.text,
+                                isEnable: true,
+                                contenPadding:
+                                    EdgeInsets.fromLTRB(10, 10, 10, 0),
+                              )),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            Dictionary.no_hp,
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                          SizedBox(height: 4),
+                          Container(
+                              margin: EdgeInsets.symmetric(horizontal: 2),
+                              decoration: CustomCard.cardPrimary(),
+                              child: TextFeldGeneral(
+                                hint: '081123456',
+                                hintStyle: Colors.grey[600],
+                                controller: _hpCont,
+                                borderSide: Colors.transparent,
+                                inputType: TextInputType.text,
+                                isEnable: true,
+                                contenPadding:
+                                    EdgeInsets.fromLTRB(10, 10, 10, 0),
+                              )),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            Dictionary.alamat,
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                          SizedBox(height: 4),
+                          Container(
+                              margin: EdgeInsets.symmetric(horizontal: 2),
+                              decoration: CustomCard.cardPrimary(),
+                              child: TextFeldGeneral(
+                                hint: Dictionary.jl_,
+                                hintStyle: Colors.grey[600],
+                                controller: _addressCont,
                                 borderSide: Colors.transparent,
                                 inputType: TextInputType.text,
                                 isEnable: true,
@@ -90,11 +145,12 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           ),
                           SizedBox(height: 4),
                           Container(
+                              margin: EdgeInsets.symmetric(horizontal: 2),
                               decoration: CustomCard.cardPrimary(),
                               child: TextFeldGeneral(
                                 hint: 'Mobile Developer',
                                 hintStyle: Colors.grey[600],
-                                controller: _searchCont,
+                                controller: _jabatanCont,
                                 borderSide: Colors.transparent,
                                 inputType: TextInputType.text,
                                 isEnable: true,

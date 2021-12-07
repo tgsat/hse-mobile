@@ -38,7 +38,10 @@ class MenuCardDashboard extends StatelessWidget {
               Text(
                 title,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.grey),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText2!
+                    .apply(color: Colors.grey),
               ),
             ],
           ),

@@ -85,7 +85,13 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+fonts:
+  - family: Roboto
+    fonts:
+      - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+      - asset: assets/fonts/Roboto/Roboto-Medium Italic.ttf
+        weight:
+          normalweight: normal
 # The following section is specific to Flutter.
 flutter:
 

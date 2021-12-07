@@ -4,6 +4,7 @@ import 'package:hse_product/core/presentation/widgets/shimmers/shimmer_list_vert
 import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:hse_product/features/change_password/presentation/pages/change_password_page.dart';
 import 'package:hse_product/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:hse_product/features/profile/presentation/widgets/item_row_profile.dart';
 import 'package:hse_product/features/profile/presentation/widgets/ubah_profile.dart';
@@ -61,7 +62,12 @@ class _BodyProfileState extends State<BodyProfile> {
                   'assets/images/edit_profile.png', Dictionary.edit_profile),
             ),
             InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ChangePasswordPage()));
+                },
                 child: itemRowBodyProfile(
                     context,
                     'assets/images/change_password.png',
@@ -76,16 +82,16 @@ class _BodyProfileState extends State<BodyProfile> {
                         actions: <Widget>[
                           TextButton(
                             onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text('Close'),
+                          ),
+                          TextButton(
+                            onPressed: () {
                               _bloc.add(ProfileLogout());
                               Navigator.pop(context);
                             },
                             child: Text('Yes'),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: Text('Close'),
                           )
                         ],
                       );

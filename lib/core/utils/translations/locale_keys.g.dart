@@ -39,6 +39,11 @@ abstract class LocaleKeys {
   static const end_date = 'end_date';
   static const login = 'login';
   static const reset = 'reset';
+  static const emergency_response = 'emergency_response';
+  static const detail_emergency_response = 'detail_emergency_response';
+  static const toolbox_talk = 'toolbox_talk';
+  static const detail_toolbox_talk = 'detail_toolbox_talk';
+  static const change_password = 'change_password';
   static const foget_password = 'forget_password';
   static const quality_health_safety_environment_system =
       'quality_health_safety_environment_system';

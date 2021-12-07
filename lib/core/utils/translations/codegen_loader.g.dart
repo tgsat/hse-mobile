@@ -52,6 +52,11 @@ class CodegenLoader extends AssetLoader {
     "end_date": "End Date",
     "login": "Login",
     "reset": "Reset",
+    "emergency_response": "Emergency Response",
+    "detail_emergency_response": "Detail Emergency Response",
+    "toolbox_talk": "Toolbox Talk",
+    "detail_toolbox_talk": "Detail Toolbox Talk",
+    "change_password": "Change Password",
     "forget_password": "Forget Password",
     "quality_health_safety_environment_system":
         "Quality Health & Safety Environment System",
@@ -80,8 +85,8 @@ class CodegenLoader extends AssetLoader {
     "detail_near_miss": "Detil Nyaris",
     "hazard": "Bahaya",
     "detail_hazard": "Detil Bahaya",
-    "fresh_eye": "Mata Segar",
-    "detail_fresh_eye": "Detil Mata Segar",
+    "fresh_eye": "Fresh Eye",
+    "detail_fresh_eye": "Detail Fresh Eye",
     "training": "Pelatihan",
     "detail_training": "Detil Pelatihan",
     "work_permit": "Izin Kerja",
@@ -95,9 +100,14 @@ class CodegenLoader extends AssetLoader {
     "end_date": "Tanggal Selesai",
     "login": "Masuk",
     "reset": "Mengatur Ulang",
+    "emergency_response": "Tanggap Darurat",
+    "detail_emergency_response": "Detil Tanggap Darurat",
+    "toolbox_talk": "Toolbox Talk",
+    "detail_toolbox_talk": "Detail Toolbox Talk",
+    "change_password": "Ubah Password",
     "forget_password": "Lupa Password",
     "quality_health_safety_environment_system":
-        "Sistem Lingkungan Kesehatan & Keselamatan Berkualitas",
+        "Quality Health & Safety Environment System",
   };
   static const Map<String, Map<String, dynamic>> mapLocales = {
     "en": en,

@@ -3,6 +3,9 @@ import 'package:hse_product/core/presentation/widgets/app_bars/home_app_bar.dart
 import 'package:hse_product/features/audit/presentation/pages/audit_page.dart';
 import 'package:hse_product/features/comunication/presentation/pages/comunication_page.dart';
 import 'package:hse_product/features/document_qhse/presentation/pages/document_qhse_page.dart';
+import 'package:hse_product/features/emergency_response/presentation/pages/emergency_response_page.dart';
+import 'package:hse_product/features/fresh_eye/presentation/pages/fresh_eye_page.dart';
+import 'package:hse_product/features/hazard/presentation/pages/hazard_page.dart';
 import 'package:hse_product/features/hse_plan/presentation/pages/hse_plan_page.dart';
 import 'package:hse_product/features/dashboard/presentation/widgets/menu_card_dashboard.dart';
 import 'package:hse_product/core/utils/translations/locale_keys.g.dart';
@@ -10,8 +13,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:hse_product/features/incident/presentation/pages/incident_page.dart';
 import 'package:hse_product/features/induction/presentation/pages/induction_page.dart';
 import 'package:hse_product/features/inspection/presentation/pages/inspection_page.dart';
+import 'package:hse_product/features/menu_meeting/presentation/pages/meeting_page.dart';
 import 'package:hse_product/features/near_miss/presentation/pages/near_miss_page.dart';
 import 'package:hse_product/features/risk_asessment/presentation/pages/risk_asessment_page.dart';
+import 'package:hse_product/features/toolbox_talk/presentation/pages/toolbox_talk.dart';
+import 'package:hse_product/features/training/presentation/pages/training_page.dart';
+import 'package:hse_product/features/work_permit/presentation/pages/work_permit_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -114,7 +121,10 @@ class _DashboardPageState extends State<DashboardPage> {
               withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
-              press: () {},
+              press: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HazardPage()));
+              },
               title: LocaleKeys.hazard.tr(),
               assets: "assets/images/hazard.png",
               withAsset: MediaQuery.of(context).size.width * 0.075,
@@ -129,25 +139,37 @@ class _DashboardPageState extends State<DashboardPage> {
               withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
-              press: () {},
+              press: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FreshEyePage()));
+              },
               title: LocaleKeys.fresh_eye.tr(),
               assets: "assets/images/fresh_eye.png",
               withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
-              press: () {},
+              press: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Trainingpage()));
+              },
               title: LocaleKeys.training.tr(),
               assets: "assets/images/training.png",
               withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
-              press: () {},
+              press: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => WorkPermitPage()));
+              },
               title: LocaleKeys.work_permit.tr(),
               assets: "assets/images/work_permit.png",
               withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
             MenuCardDashboard(
-              press: () {},
+              press: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MenuMeetingPage()));
+              },
               title: LocaleKeys.meeting.tr(),
               assets: "assets/images/meeting.png",
               withAsset: MediaQuery.of(context).size.width * 0.075,
@@ -156,6 +178,26 @@ class _DashboardPageState extends State<DashboardPage> {
               press: () {},
               title: LocaleKeys.statistics.tr(),
               assets: "assets/images/statistics.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
+            ),
+            MenuCardDashboard(
+              press: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => EmergencyResponsePage()));
+              },
+              title: LocaleKeys.emergency_response.tr(),
+              assets: "assets/images/emergency_response.png",
+              withAsset: MediaQuery.of(context).size.width * 0.075,
+            ),
+            MenuCardDashboard(
+              press: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ToolboxTalkPage()));
+              },
+              title: LocaleKeys.toolbox_talk.tr(),
+              assets: "assets/images/toolbox_talks.png",
               withAsset: MediaQuery.of(context).size.width * 0.075,
             ),
           ]),

@@ -47,7 +47,7 @@ class ItemCardNearMiss extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
+                margin: EdgeInsets.symmetric(horizontal: 12),
                 child: widget1,
               ),
               Container(
