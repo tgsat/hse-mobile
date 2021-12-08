@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
-import 'package:hse_product/features/toolbox_talk/presentation/pages/daily_toolbox_talk/daily_toolbox_talk_detail.dart';
-import 'package:hse_product/features/toolbox_talk/presentation/widgets/item_data_daily.dart';
-import 'package:hse_product/features/toolbox_talk/presentation/widgets/searchBar_toolbox.dart';
+import 'package:hse_product/features/emergency_response/presentation/pages/laporan/laporan_detail_page.dart';
+import 'package:hse_product/features/emergency_response/presentation/widgets/item_data.dart';
+import 'package:hse_product/features/emergency_response/presentation/widgets/searchBar_emergency_response.dart.dart';
 
-class DailyToolboxTalkPage extends StatelessWidget {
-  const DailyToolboxTalkPage({Key? key}) : super(key: key);
+class LaporanKeadaanDarurat extends StatelessWidget {
+  const LaporanKeadaanDarurat({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class DailyToolboxTalkPage extends StatelessWidget {
           horizontal: SizeConfig.marginActivity),
       child: Column(
         children: [
-          SearchBarToolbox(),
+          SearchBarEmergency(),
           SizedBox(height: 5),
           Divider(color: Colors.grey.shade100),
           Expanded(
@@ -27,9 +27,9 @@ class DailyToolboxTalkPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => DailyToolboxTalkDetail()));
+                          builder: (context) => LaporanDetailPage()));
                 },
-                child: ItemDataDailyToolboxTalk(),
+                child: ItemDataEmergencyResponse(),
               );
             },
           ))

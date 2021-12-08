@@ -13,7 +13,9 @@ class ItemDataEmergencyResponse extends StatelessWidget {
         children: [
           itemRow(firstRow: 'Proyek', secondRow: 'D302-15172'),
           itemRow(firstRow: 'Nama Pelapor', secondRow: 'Sudirman'),
+          itemRow(firstRow: 'Jabatan', secondRow: 'mobile dev'),
           itemRow(firstRow: 'Tgl Kejadian', secondRow: '12/09/2021'),
+          itemRow(firstRow: 'No Pelapor', secondRow: '081123456'),
           itemRow(firstRow: 'Status', secondRow: 'Open'),
         ],
       ),
