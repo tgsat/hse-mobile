@@ -47,8 +47,8 @@ class EmergencyResponsePage extends StatelessWidget {
             bottom: TabBar(
               indicatorColor: ColorConfig.primaryColor,
               tabs: [
-                Tab(icon: itemText("Laporan Keadaan darurat", context)),
-                Tab(icon: itemText("Simulasi Keadaan darurat", context)),
+                Tab(child: itemText("Laporan Keadaan darurat", context)),
+                Tab(child: itemText("Simulasi Keadaan darurat", context)),
               ],
             ),
           ),

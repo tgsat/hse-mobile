@@ -30,6 +30,23 @@ class NearMissDetailpage extends StatelessWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[200],
+                                  borderRadius: BorderRadius.circular(50)),
+                              width: 20,
+                              height: 20,
+                              child: Image.asset(
+                                'assets/images/approved.png',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
                         itemSingleRow('Data Kejadian', 'Data Kejadian'),
                         SizedBox(height: 4),
                         itemSingleRow('Investigasi', 'Investigasi'),

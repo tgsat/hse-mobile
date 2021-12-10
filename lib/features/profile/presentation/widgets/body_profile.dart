@@ -9,6 +9,7 @@ import 'package:hse_product/features/profile/presentation/bloc/profile_bloc.dart
 import 'package:hse_product/features/profile/presentation/widgets/item_row_profile.dart';
 import 'package:hse_product/features/profile/presentation/widgets/ubah_profile.dart';
 import 'package:hse_product/features/splash/presentation/pages/splash_page.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 import 'display_data.dart';
 
@@ -55,18 +56,20 @@ class _BodyProfileState extends State<BodyProfile> {
             SizedBox(height: 60),
             InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => EditProfilePage()));
+                pushNewScreen(context,
+                    screen: EditProfilePage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               child: itemRowBodyProfile(context,
                   'assets/images/edit_profile.png', Dictionary.edit_profile),
             ),
             InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => ChangePasswordPage()));
+                  pushNewScreen(context,
+                      screen: ChangePasswordPage(),
+                      withNavBar: false,
+                      pageTransitionAnimation: PageTransitionAnimation.fade);
                 },
                 child: itemRowBodyProfile(
                     context,

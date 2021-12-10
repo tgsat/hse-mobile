@@ -3,25 +3,25 @@ import 'package:hse_product/core/presentation/widgets/buttons/button_search_filt
 import 'package:hse_product/core/presentation/widgets/text_fields/text_field_general.dart';
 import 'package:hse_product/core/utils/values/color_config.dart';
 
-class SearchBarToolbox extends StatefulWidget {
-  const SearchBarToolbox({Key? key}) : super(key: key);
+class SearchBarWorkPermit extends StatefulWidget {
+  const SearchBarWorkPermit({Key? key}) : super(key: key);
 
   @override
-  _SearchBarToolboxState createState() => _SearchBarToolboxState();
+  _SearchBarWorkPermitState createState() => _SearchBarWorkPermitState();
 }
 
-class _SearchBarToolboxState extends State<SearchBarToolbox>
+class _SearchBarWorkPermitState extends State<SearchBarWorkPermit>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   DateTime selectedDate = DateTime.now();
-  var _kategoriFilter = ["Lokasi", "Proyek", "Tgl Pelaksanaan"];
-  var _proyekFilter = ["D111-14437", "D301-15488", "D301-15445", "D301-15586"];
+  var _kategoriFilter = ["No WP", "Tgl WP", "Tipe WP"];
+  var _proyekFilter = ["Sakit", "Izin"];
 
   var _value;
 
   @override
   void initState() {
-    _value = 'Lokasi';
+    _value = 'No WP';
     _tabController = TabController(length: 3, vsync: this);
     _tabController.addListener(() {
       setState(() {});
@@ -94,7 +94,7 @@ class _SearchBarToolboxState extends State<SearchBarToolbox>
             ),
           ),
           SizedBox(width: 8.0),
-          _value == 'Lokasi'
+          _value == 'No WP'
               ? Expanded(
                   child: GestureDetector(
                     child: Container(
@@ -111,14 +111,14 @@ class _SearchBarToolboxState extends State<SearchBarToolbox>
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         child: TextFeldGeneral(
                           isEnable: true,
-                          hint: 'Lokasi',
+                          hint: 'No Work Permit',
                           borderSide: Colors.transparent,
                           contenPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                         )),
                   ),
                 )
               : Container(),
-          _value == 'Proyek'
+          _value == 'Tipe WP'
               ? Expanded(
                   child: GestureDetector(
                     child: Container(
@@ -137,8 +137,7 @@ class _SearchBarToolboxState extends State<SearchBarToolbox>
                         underline: Container(),
                         isExpanded: true,
                         // value: _value,
-                        hint: Text('D111-14437',
-                            style: TextStyle(fontSize: 14.0)),
+                        hint: Text('Izin', style: TextStyle(fontSize: 14.0)),
                         items: _proyekFilter.map((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
@@ -157,7 +156,7 @@ class _SearchBarToolboxState extends State<SearchBarToolbox>
                   ),
                 )
               : Container(),
-          _value == 'Tgl Pelaksanaan'
+          _value == 'Tgl WP'
               ? Expanded(
                   child: GestureDetector(
                     child: Container(
@@ -188,8 +187,8 @@ class _SearchBarToolboxState extends State<SearchBarToolbox>
               : Container(),
           SizedBox(width: 8.0),
           InkWell(
-            child: ButtonSearchFilter(),
             onTap: () {},
+            child: ButtonSearchFilter(),
           )
         ],
       ),

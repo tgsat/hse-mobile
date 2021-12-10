@@ -48,10 +48,10 @@ class ToolboxTalkPage extends StatelessWidget {
               indicatorColor: ColorConfig.primaryColor,
               tabs: [
                 Tab(
-                    icon: itemText(
+                    child: itemText(
                         "Daily " "${LocaleKeys.toolbox_talk.tr()}", context)),
                 Tab(
-                    icon: itemText(
+                    child: itemText(
                         "Weekly " "${LocaleKeys.toolbox_talk.tr()}", context)),
               ],
             ),

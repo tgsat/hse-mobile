@@ -19,6 +19,7 @@ import 'package:hse_product/features/risk_asessment/presentation/pages/risk_ases
 import 'package:hse_product/features/toolbox_talk/presentation/pages/toolbox_talk.dart';
 import 'package:hse_product/features/training/presentation/pages/training_page.dart';
 import 'package:hse_product/features/work_permit/presentation/pages/work_permit_page.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -44,8 +45,10 @@ class _DashboardPageState extends State<DashboardPage> {
           children: <Widget>[
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HSEPlanPage()));
+                pushNewScreen(context,
+                    screen: HSEPlanPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.hse_plan.tr(),
               assets: "assets/images/planner.png",
@@ -53,10 +56,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DocumentQHSEPage()));
+                pushNewScreen(context,
+                    screen: DocumentQHSEPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.dokument_qhse.tr(),
               assets: "assets/images/documents.png",
@@ -64,10 +67,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ComunicationPage()));
+                pushNewScreen(context,
+                    screen: ComunicationPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.communication.tr(),
               assets: "assets/images/comunication.png",
@@ -75,8 +78,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => InspectionPage()));
+                pushNewScreen(context,
+                    screen: InspectionPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.inspection.tr(),
               assets: "assets/images/inspection.png",
@@ -84,8 +89,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AuditPage()));
+                pushNewScreen(context,
+                    screen: AuditPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.audit.tr(),
               assets: "assets/images/audit.png",
@@ -93,10 +100,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => RiskAsessmentPage()));
+                pushNewScreen(context,
+                    screen: RiskAsessmentPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.risk_asessment.tr(),
               assets: "assets/images/risk_asessment.png",
@@ -104,8 +111,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => IncidentPage()));
+                pushNewScreen(context,
+                    screen: IncidentPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.incident.tr(),
               assets: "assets/images/incident.png",
@@ -113,8 +122,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => NearMissPage()));
+                pushNewScreen(context,
+                    screen: NearMissPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.near_miss.tr(),
               assets: "assets/images/near_miss.png",
@@ -122,8 +133,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HazardPage()));
+                pushNewScreen(context,
+                    screen: HazardPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.hazard.tr(),
               assets: "assets/images/hazard.png",
@@ -131,8 +144,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => InductionPage()));
+                pushNewScreen(context,
+                    screen: InductionPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.induction.tr(),
               assets: "assets/images/induction.png",
@@ -140,8 +155,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => FreshEyePage()));
+                pushNewScreen(context,
+                    screen: FreshEyePage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.fresh_eye.tr(),
               assets: "assets/images/fresh_eye.png",
@@ -149,8 +166,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Trainingpage()));
+                pushNewScreen(context,
+                    screen: Trainingpage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.training.tr(),
               assets: "assets/images/training.png",
@@ -158,8 +177,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => WorkPermitPage()));
+                pushNewScreen(context,
+                    screen: WorkPermitPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.work_permit.tr(),
               assets: "assets/images/work_permit.png",
@@ -167,8 +188,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MenuMeetingPage()));
+                pushNewScreen(context,
+                    screen: MenuMeetingPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.meeting.tr(),
               assets: "assets/images/meeting.png",
@@ -182,10 +205,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => EmergencyResponsePage()));
+                pushNewScreen(context,
+                    screen: EmergencyResponsePage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.emergency_response.tr(),
               assets: "assets/images/emergency_response.png",
@@ -193,8 +216,10 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             MenuCardDashboard(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ToolboxTalkPage()));
+                pushNewScreen(context,
+                    screen: ToolboxTalkPage(),
+                    withNavBar: false,
+                    pageTransitionAnimation: PageTransitionAnimation.fade);
               },
               title: LocaleKeys.toolbox_talk.tr(),
               assets: "assets/images/toolbox_talks.png",

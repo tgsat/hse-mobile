@@ -5,6 +5,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/work_permit/presentation/pages/work_permit_detail_page.dart';
 import 'package:hse_product/features/work_permit/presentation/widgets/item_data.dart';
+import 'package:hse_product/features/work_permit/presentation/widgets/searchBar_work_permit.dart';
 
 class WorkPermitPage extends StatelessWidget {
   const WorkPermitPage({Key? key}) : super(key: key);
@@ -19,7 +20,8 @@ class WorkPermitPage extends StatelessWidget {
             horizontal: SizeConfig.marginActivity),
         child: Column(
           children: [
-            SizedBox(height: 10.0),
+            SearchBarWorkPermit(),
+            SizedBox(height: 5),
             Divider(color: Colors.grey.shade100),
             Expanded(
                 child: ListView.builder(

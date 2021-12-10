@@ -76,23 +76,24 @@ class _BodyLoginState extends State<BodyLogin> {
                         SizedBox(height: 15),
                         Center(
                           child: Text(
-                              LocaleKeys
-                                  .quality_health_safety_environment_system
-                                  .tr(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .subtitle2!
-                                  .apply(color: Colors.white),
-                              textAlign: TextAlign.center),
-                        ),
-                        Center(
-                          child: Text(
                             Dictionary.pt_nindaya_karya,
                             style: Theme.of(context)
                                 .textTheme
                                 .subtitle2!
                                 .apply(color: Colors.white),
                           ),
+                        ),
+                        SizedBox(height: 4),
+                        Center(
+                          child: Text(
+                              LocaleKeys
+                                  .quality_health_safety_environment_system
+                                  .tr(),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .subtitle1!
+                                  .apply(color: Colors.white),
+                              textAlign: TextAlign.center),
                         ),
                         SizedBox(height: 20),
                       ],

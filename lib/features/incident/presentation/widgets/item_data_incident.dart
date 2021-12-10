@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:hse_product/core/presentation/widgets/card/custom_item_card.dart';
 import 'package:hse_product/core/presentation/widgets/item_two/item_two_row_start.dart';
-import 'package:hse_product/features/incident/presentation/widgets/item_card.dart';
-import 'package:hse_product/core/presentation/widgets/item_two/item_two_column.dart';
 
 class ItemDataIncident extends StatelessWidget {
   const ItemDataIncident({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ItemCardIncident(
-      title1: itemSingleRow('Laporan Awal', '-'),
-      title2: itemSingleRow('Laporan Akhir', '-'),
-      title1text: ': -',
-      title2text: ': -',
+    return CustomItemCard(
       assets: 'assets/images/approved.png',
-      widget1: itemTwoRowsStart('No Register', '-', 'Tanggal Incident', '-'),
-      widget2: itemTwoRowsStart('Proyek', '-', 'Lokasi', '-'),
-      bar3: 'Status',
-      bar3text: ': Open',
+      widgetall: Column(
+        children: [
+          itemRow(
+              firstRow: 'No Register', secondRow: '071/D302-15172/302/2021'),
+          itemRow(firstRow: 'Proyek', secondRow: 'D302-15172'),
+          itemRow(firstRow: 'Tgl Kecelakaan', secondRow: '09/02/2021 14:15'),
+          itemRow(firstRow: 'Lokasi', secondRow: 'Basement'),
+          itemRow(firstRow: 'Jml Korban', secondRow: '1 Orang'),
+          itemRow(firstRow: 'Status', secondRow: 'Close'),
+        ],
+      ),
     );
   }
 }

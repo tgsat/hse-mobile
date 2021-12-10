@@ -5,6 +5,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/near_miss/presentation/pages/near_miss_detail_page.dart';
 import 'package:hse_product/features/near_miss/presentation/widgets/item_data.dart';
+import 'package:hse_product/features/near_miss/presentation/widgets/searchBar_near_miss.dart';
 
 class NearMissPage extends StatelessWidget {
   const NearMissPage({Key? key}) : super(key: key);
@@ -19,11 +20,9 @@ class NearMissPage extends StatelessWidget {
             horizontal: SizeConfig.marginActivity),
         child: Column(
           children: [
-            //
-            SizedBox(height: 10.0),
-            Divider(
-              color: Colors.grey.shade100,
-            ),
+            SearchBarNearMiss(),
+            SizedBox(height: 5),
+            Divider(color: Colors.grey.shade100),
             Expanded(
               child: ListView.builder(
                 itemCount: 10,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hse_product/core/presentation/widgets/buttons/button_search_filter.dart';
 import 'package:hse_product/core/utils/values/color_config.dart';
 
 class SearchBarEmergency extends StatefulWidget {
@@ -171,13 +172,10 @@ class _SearchBarEmergencyState extends State<SearchBarEmergency>
                 )
               : Container(),
           SizedBox(width: 8.0),
-          Container(
-              padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: ColorConfig.primaryColor,
-                borderRadius: BorderRadius.all(Radius.circular(5)),
-              ),
-              child: Icon(Icons.search, size: 20, color: Colors.white)),
+          InkWell(
+            onTap: () {},
+            child: ButtonSearchFilter(),
+          )
         ],
       ),
     );

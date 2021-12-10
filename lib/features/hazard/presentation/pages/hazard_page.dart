@@ -5,6 +5,7 @@ import 'package:hse_product/core/utils/translations/locale_keys.g.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/hazard/presentation/pages/hazard_detail_page.dart';
 import 'package:hse_product/features/hazard/presentation/widgets/item_data.dart';
+import 'package:hse_product/features/hazard/presentation/widgets/searchBar_hazard.dart';
 
 class HazardPage extends StatelessWidget {
   const HazardPage({Key? key}) : super(key: key);
@@ -19,7 +20,8 @@ class HazardPage extends StatelessWidget {
             horizontal: SizeConfig.marginActivity),
         child: Column(
           children: [
-            SizedBox(height: 10.0),
+            SearchBarHazard(),
+            SizedBox(height: 5),
             Divider(color: Colors.grey.shade100),
             Expanded(
               child: ListView.builder(

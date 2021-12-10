@@ -5,6 +5,7 @@ import 'package:hse_product/core/utils/translations/locale_keys.g.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/fresh_eye/presentation/pages/fresh_eye_detail_page.dart';
 import 'package:hse_product/features/fresh_eye/presentation/widgets/item_data.dart';
+import 'package:hse_product/features/fresh_eye/presentation/widgets/searchBar_fresh_eye.dart';
 
 class FreshEyePage extends StatelessWidget {
   const FreshEyePage({Key? key}) : super(key: key);
@@ -20,7 +21,8 @@ class FreshEyePage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            SizedBox(height: 10.0),
+            SearchBarFreshEye(),
+            SizedBox(height: 5),
             Divider(color: Colors.grey.shade100),
             Expanded(
               child: ListView.builder(

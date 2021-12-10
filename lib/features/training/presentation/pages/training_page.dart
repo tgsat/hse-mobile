@@ -5,6 +5,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/training/presentation/pages/training_detail_page.dart';
 import 'package:hse_product/features/training/presentation/widgets/item_data.dart';
+import 'package:hse_product/features/training/presentation/widgets/searchBar_training.dart';
 
 class Trainingpage extends StatelessWidget {
   const Trainingpage({Key? key}) : super(key: key);
@@ -19,7 +20,8 @@ class Trainingpage extends StatelessWidget {
             horizontal: SizeConfig.marginActivity),
         child: Column(
           children: [
-            SizedBox(height: 10.0),
+            SearchBarTraining(),
+            SizedBox(height: 5),
             Divider(color: Colors.grey.shade100),
             Expanded(
                 child: ListView.builder(

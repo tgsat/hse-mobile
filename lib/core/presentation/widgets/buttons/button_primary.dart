@@ -27,10 +27,8 @@ class PrimaryButton extends StatelessWidget {
       ),
       child: Text(
         label ?? '',
-        style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.bold,
-            color: iColor ?? Colors.black),
+        style:
+            Theme.of(context).textTheme.headline6!.apply(color: Colors.white),
       ),
       onPressed: onPress,
     );

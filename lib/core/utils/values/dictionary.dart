@@ -93,7 +93,7 @@ class Dictionary {
   // O
   // P
   static const String profile = 'Profile';
-  static const String pt_nindaya_karya = 'PT. Nindya Karya';
+  static const String pt_nindaya_karya = 'PT NINDYA KARYA';
   static const String password = 'Password';
   static const String edit_profile = 'Edit Profile';
   static const String pilih_kriteria = 'Pilih Kriteria';

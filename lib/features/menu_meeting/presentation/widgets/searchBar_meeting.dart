@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hse_product/core/presentation/widgets/buttons/button_search_filter.dart';
 import 'package:hse_product/core/presentation/widgets/text_fields/text_field_general.dart';
 import 'package:hse_product/core/utils/values/color_config.dart';
 
@@ -187,13 +188,10 @@ class _SearchBarMeetingState extends State<SearchBarMeeting>
                 )
               : Container(),
           SizedBox(width: 8.0),
-          Container(
-              padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: ColorConfig.primaryColor,
-                borderRadius: BorderRadius.all(Radius.circular(5)),
-              ),
-              child: Icon(Icons.search, size: 20, color: Colors.white)),
+          InkWell(
+            onTap: () {},
+            child: ButtonSearchFilter(),
+          )
         ],
       ),
     );

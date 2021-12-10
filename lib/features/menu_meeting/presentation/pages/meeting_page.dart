@@ -46,8 +46,10 @@ class MenuMeetingPage extends StatelessWidget {
             bottom: TabBar(
               indicatorColor: ColorConfig.primaryColor,
               tabs: [
-                Tab(icon: itemText(LocaleKeys.meeting.tr() + " HSE", context)),
-                Tab(icon: itemText(LocaleKeys.meeting.tr() + " P2K3", context)),
+                Tab(child: itemText(LocaleKeys.meeting.tr() + " HSE", context)),
+                Tab(
+                    child:
+                        itemText(LocaleKeys.meeting.tr() + " P2K3", context)),
               ],
             ),
           ),
