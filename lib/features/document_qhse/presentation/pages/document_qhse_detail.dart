@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hse_product/core/presentation/widgets/app_bars/app_bar_white.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
-import 'package:hse_product/features/document_qhse/presentation/widgets/item_document_qhse.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class DocumentQHSEDetail extends StatefulWidget {
@@ -32,15 +31,15 @@ class _DocumentQHSEDetailState extends State<DocumentQHSEDetail> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ItemDetailDocumentQHSE(),
               Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Center(
                   child: Container(
-                    height: 200,
-                    padding: EdgeInsets.all(5.0),
+                    // height: 200,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: SizeConfig.marginActivity),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[

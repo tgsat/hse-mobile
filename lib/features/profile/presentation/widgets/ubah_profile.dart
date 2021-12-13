@@ -16,11 +16,11 @@ class EditProfilePage extends StatefulWidget {
 
 class _EditProfilePageState extends State<EditProfilePage> {
   GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
-  final _nameCont = new TextEditingController();
-  final _emailCont = new TextEditingController();
-  final _hpCont = new TextEditingController();
-  final _jabatanCont = new TextEditingController();
-  final _addressCont = new TextEditingController();
+  final _nameCont = new TextEditingController(text: Dictionary.user_pragma);
+  final _emailCont = new TextEditingController(text: 'userpragma@gmail.com');
+  final _hpCont = new TextEditingController(text: '0811234567');
+  final _jabatanCont = new TextEditingController(text: Dictionary.jabatan);
+  final _addressCont = new TextEditingController(text: Dictionary.jl_);
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
                               decoration: CustomCard.cardPrimary(),
                               child: TextFeldGeneral(
                                 hint: Dictionary.nama,
-                                hintStyle: Colors.grey[600],
                                 controller: _nameCont,
                                 borderSide: Colors.transparent,
                                 inputType: TextInputType.text,
@@ -76,8 +75,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                               margin: EdgeInsets.symmetric(horizontal: 2),
                               decoration: CustomCard.cardPrimary(),
                               child: TextFeldGeneral(
-                                hint: 'userpragma@gmail.com',
-                                hintStyle: Colors.grey[600],
+                                hint: Dictionary.email,
                                 controller: _emailCont,
                                 borderSide: Colors.transparent,
                                 inputType: TextInputType.text,
@@ -100,8 +98,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                               margin: EdgeInsets.symmetric(horizontal: 2),
                               decoration: CustomCard.cardPrimary(),
                               child: TextFeldGeneral(
-                                hint: '081123456',
-                                hintStyle: Colors.grey[600],
+                                hint: Dictionary.no_hp,
                                 controller: _hpCont,
                                 borderSide: Colors.transparent,
                                 inputType: TextInputType.text,
@@ -124,8 +121,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                               margin: EdgeInsets.symmetric(horizontal: 2),
                               decoration: CustomCard.cardPrimary(),
                               child: TextFeldGeneral(
-                                hint: Dictionary.jl_,
-                                hintStyle: Colors.grey[600],
+                                hint: Dictionary.alamat,
                                 controller: _addressCont,
                                 borderSide: Colors.transparent,
                                 inputType: TextInputType.text,
@@ -148,8 +144,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                               margin: EdgeInsets.symmetric(horizontal: 2),
                               decoration: CustomCard.cardPrimary(),
                               child: TextFeldGeneral(
-                                hint: 'Mobile Developer',
-                                hintStyle: Colors.grey[600],
+                                hint: Dictionary.jabatan,
                                 controller: _jabatanCont,
                                 borderSide: Colors.transparent,
                                 inputType: TextInputType.text,

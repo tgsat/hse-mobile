@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hse_product/core/presentation/widgets/buttons/button_search_filter.dart';
 import 'package:hse_product/core/presentation/widgets/text_fields/text_field_general.dart';
-import 'package:hse_product/core/utils/values/color_config.dart';
 
 class SearchBarIncident extends StatefulWidget {
   const SearchBarIncident({Key? key}) : super(key: key);

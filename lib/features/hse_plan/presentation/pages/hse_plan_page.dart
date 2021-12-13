@@ -3,7 +3,7 @@ import 'package:hse_product/core/presentation/widgets/app_bars/app_bar_white.dar
 import 'package:hse_product/core/utils/translations/locale_keys.g.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/hse_plan/presentation/pages/hse_plan_details.dart';
-import 'package:hse_product/features/hse_plan/presentation/widgets/combo_filter.dart';
+import 'package:hse_product/features/hse_plan/presentation/widgets/searchBar_hse_plan.dart';
 import 'package:hse_product/features/hse_plan/presentation/widgets/item_hse_plan.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -21,8 +21,8 @@ class HSEPlanPage extends StatelessWidget {
               vertical: SizeConfig.marginActivity),
           child: Column(
             children: [
-              ComboFilterHSEPlan(),
-              SizedBox(height: 10.0),
+              SearchBarHSEPLan(),
+              SizedBox(height: 5),
               Divider(
                 color: Colors.grey.shade100,
               ),

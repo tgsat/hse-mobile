@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:hse_product/core/presentation/widgets/buttons/button_search_filter.dart';
+import 'package:hse_product/core/presentation/widgets/text_fields/text_field_general.dart';
 
-class SearchBarEmergency extends StatefulWidget {
-  const SearchBarEmergency({Key? key}) : super(key: key);
+class SearchBarComunication extends StatefulWidget {
+  const SearchBarComunication({Key? key}) : super(key: key);
 
   @override
-  _SearchBarEmergencyState createState() => _SearchBarEmergencyState();
+  _SearchBarComunicationState createState() => _SearchBarComunicationState();
 }
 
-class _SearchBarEmergencyState extends State<SearchBarEmergency>
+class _SearchBarComunicationState extends State<SearchBarComunication>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   DateTime selectedDate = DateTime.now();
-  var _kategoriFilter = ["Proyek", "Status"];
-  var _proyekFilter = ["D111-14437", "D301-15488", "D301-15445", "D301-15586"];
+  var _kategoriFilter = ["Judul", "Tipe", "Status"];
+  var _tipeFilter = ["APD", "Angkat & Angkut", "Tenaga & Produksi"];
   var _sattusFilter = ["Open", "Close"];
-
   var _value;
 
   @override
   void initState() {
-    _value = 'Proyek';
+    _value = 'Judul';
     _tabController = TabController(length: 3, vsync: this);
     _tabController.addListener(() {
       setState(() {});
@@ -93,7 +93,31 @@ class _SearchBarEmergencyState extends State<SearchBarEmergency>
             ),
           ),
           SizedBox(width: 8.0),
-          _value == 'Proyek'
+          _value == 'Judul'
+              ? Expanded(
+                  child: GestureDetector(
+                    child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 5,
+                            ),
+                          ],
+                        ),
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        child: TextFeldGeneral(
+                          isEnable: true,
+                          hint: 'Judul',
+                          borderSide: Colors.transparent,
+                          contenPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                        )),
+                  ),
+                )
+              : Container(),
+          _value == 'Tipe'
               ? Expanded(
                   child: GestureDetector(
                     child: Container(
@@ -112,9 +136,8 @@ class _SearchBarEmergencyState extends State<SearchBarEmergency>
                         underline: Container(),
                         isExpanded: true,
                         // value: _value,
-                        hint: Text('D111-14437',
-                            style: TextStyle(fontSize: 14.0)),
-                        items: _proyekFilter.map((String value) {
+                        hint: Text('APD', style: TextStyle(fontSize: 14.0)),
+                        items: _tipeFilter.map((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
                             child: Text(value),

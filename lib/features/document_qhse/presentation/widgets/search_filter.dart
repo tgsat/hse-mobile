@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hse_product/core/presentation/widgets/buttons/button_search_filter.dart';
 import 'package:hse_product/core/presentation/widgets/text_fields/text_field_general.dart';
-import 'package:hse_product/core/utils/values/color_config.dart';
 import 'package:hse_product/core/utils/values/dictionary.dart';
 
 class SearchFilter extends StatefulWidget {
@@ -16,25 +16,39 @@ class _SearchFilterState extends State<SearchFilter> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(5.0),
+      height: 50,
       child: Row(
         children: [
           Expanded(
-            child: Container(
-                child: TextFeldGeneral(
-              hint: Dictionary.search,
-              hintStyle: Colors.black,
-              controller: searchCont,
-              inputType: TextInputType.text,
-              isEnable: true,
-              contenPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-              sufixIcon: InkWell(
-                child: Icon(Icons.search, color: ColorConfig.primaryColor),
-                onTap: () {
-                  print("cek");
-                },
-              ),
-            )),
+            child: GestureDetector(
+              child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 5,
+                      ),
+                    ],
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: TextFeldGeneral(
+                    isEnable: true,
+                    controller: searchCont,
+                    hint: Dictionary.search,
+                    inputType: TextInputType.text,
+                    borderSide: Colors.transparent,
+                    contenPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                  )),
+            ),
           ),
+          SizedBox(width: 8.0),
+          InkWell(
+            onTap: () {},
+            child: ButtonSearchFilter(),
+          )
         ],
       ),
     );

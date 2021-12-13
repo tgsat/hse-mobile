@@ -4,7 +4,7 @@ import 'package:hse_product/core/utils/translations/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/risk_asessment/presentation/pages/risk_asessment_detail.dart';
-import 'package:hse_product/features/risk_asessment/presentation/widgets/combo_filter.dart';
+import 'package:hse_product/features/risk_asessment/presentation/widgets/searchBar_risk_asessment.dart';
 import 'package:hse_product/features/risk_asessment/presentation/widgets/item_data_risk_asessment.dart';
 
 class RiskAsessmentPage extends StatelessWidget {
@@ -20,8 +20,8 @@ class RiskAsessmentPage extends StatelessWidget {
             horizontal: SizeConfig.marginActivity),
         child: Column(
           children: [
-            ComboFilterRiskAsessment(),
-            SizedBox(height: 10.0),
+            SearchBarRiskAsessment(),
+            SizedBox(height: 5),
             Divider(
               color: Colors.grey.shade100,
             ),

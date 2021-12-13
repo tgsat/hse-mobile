@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hse_product/features/hse_plan/presentation/widgets/item_card_list.dart';
+import 'package:hse_product/core/presentation/widgets/card/custom_item_card.dart';
 import 'package:hse_product/core/presentation/widgets/item_two/item_two_row_start.dart';
 
 class ItemHSEPlan extends StatelessWidget {
@@ -7,12 +7,16 @@ class ItemHSEPlan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ItemCardListHSEPlan(
-        assets: 'assets/images/approved.png',
-        widget1: itemTwoRowsStart('Tahun', '2021', 'Lokasi', 'Asrama pragma'),
-        widget2:
-            itemTwoRowsStart('Tanggal', '11/11/2021', 'Status', 'Approved'),
-        bar3: 'Tim',
-        bar3text: ': Pelaksana 1, Pelaksana 2, Pelaksana 3');
+    return CustomItemCard(
+      assets: 'assets/images/approved.png',
+      widgetall: Column(
+        children: [
+          itemRow(firstRow: 'Judul HSE Plan', secondRow: 'Content'),
+          itemRow(firstRow: 'Tgl HSE Plan', secondRow: '12/21/2021'),
+          itemRow(firstRow: 'Revisi', secondRow: 'Content'),
+          itemRow(firstRow: 'Status', secondRow: 'Open'),
+        ],
+      ),
+    );
   }
 }

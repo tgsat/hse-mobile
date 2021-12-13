@@ -26,7 +26,8 @@ class MenuMeetingDetailPage extends StatelessWidget {
               ),
               child: Center(
                 child: Container(
-                  padding: EdgeInsets.all(5.0),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: SizeConfig.marginActivity),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,

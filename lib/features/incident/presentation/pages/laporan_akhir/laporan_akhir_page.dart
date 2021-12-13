@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
-import 'package:hse_product/features/incident/presentation/pages/incident_detail_page.dart';
+import 'package:hse_product/features/incident/presentation/pages/laporan_akhir/laporan_akhir_detail_page.dart';
 import 'package:hse_product/features/incident/presentation/widgets/item_data_incident.dart';
 import 'package:hse_product/features/incident/presentation/widgets/searchBar_incident.dart';
 
@@ -30,7 +30,7 @@ class LaporanAkhirPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => IncidentDetailPage()));
+                            builder: (context) => LaporanAkhirDetailPage()));
                   },
                   child: ItemDataIncident(),
                 );

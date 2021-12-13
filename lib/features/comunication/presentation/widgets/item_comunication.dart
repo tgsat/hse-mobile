@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hse_product/features/comunication/presentation/widgets/item_card_list.dart';
+import 'package:hse_product/core/presentation/widgets/card/custom_item_card.dart';
 import 'package:hse_product/core/presentation/widgets/item_two/item_two_row_start.dart';
 
 class ItemComunication extends StatefulWidget {
@@ -12,30 +12,16 @@ class ItemComunication extends StatefulWidget {
 class _ItemComunicationState extends State<ItemComunication> {
   @override
   Widget build(BuildContext context) {
-    return ItemcardListComunication(
-        assets: 'assets/images/approved.png',
-        widget1: itemTwoRowsStart('Judul', 'content', 'Tanggal', '11/11/2021'),
-        widget2: itemTwoRowsStart('Status', 'Approved', 'Waktu', '11:30'),
-        bar3: 'Tipe',
-        bar3text: ': -');
-  }
-}
-
-class ItemDetailComunication extends StatefulWidget {
-  const ItemDetailComunication({Key? key}) : super(key: key);
-
-  @override
-  _ItemDetailComunicationState createState() => _ItemDetailComunicationState();
-}
-
-class _ItemDetailComunicationState extends State<ItemDetailComunication> {
-  @override
-  Widget build(BuildContext context) {
-    return ItemcardListComunication(
-        assets: 'assets/images/approved.png',
-        widget1: itemTwoRowsStart('Judul', 'content', 'Tanggal', '11/11/2021'),
-        widget2: itemTwoRowsStart('Status', 'Approved', 'Waktu', '11:30'),
-        bar3: 'Tipe',
-        bar3text: ': ...');
+    return CustomItemCard(
+      assets: 'assets/images/approved.png',
+      widgetall: Column(
+        children: [
+          itemRow(firstRow: 'Judul', secondRow: 'Content'),
+          itemRow(firstRow: 'Tgl Posting', secondRow: '11/11/2021'),
+          itemRow(firstRow: 'Tipe', secondRow: '-'),
+          itemRow(firstRow: 'Status', secondRow: 'Open'),
+        ],
+      ),
+    );
   }
 }

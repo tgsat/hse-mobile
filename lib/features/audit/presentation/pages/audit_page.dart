@@ -3,7 +3,7 @@ import 'package:hse_product/core/presentation/widgets/app_bars/app_bar_white.dar
 import 'package:hse_product/core/utils/values/dictionary.dart';
 import 'package:hse_product/core/utils/values/size_config.dart';
 import 'package:hse_product/features/audit/presentation/pages/audit_detail.dart';
-import 'package:hse_product/features/audit/presentation/widgets/combo_filter.dart';
+import 'package:hse_product/features/audit/presentation/widgets/searchBar_audit.dart';
 import 'package:hse_product/features/audit/presentation/widgets/item_data_audit.dart';
 
 class AuditPage extends StatefulWidget {
@@ -24,8 +24,8 @@ class _AuditPageState extends State<AuditPage> {
             horizontal: SizeConfig.marginActivity),
         child: Column(
           children: [
-            ComboFilterAudit(),
-            SizedBox(height: 10.0),
+            SearchBarAudit(),
+            SizedBox(height: 5),
             Divider(
               color: Colors.grey.shade100,
             ),

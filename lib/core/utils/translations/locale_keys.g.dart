@@ -41,7 +41,9 @@ abstract class LocaleKeys {
   static const reset = 'reset';
   static const report = 'report';
   static const report_first = 'report_first';
+  static const detail_report_first = 'detail_report_first';
   static const report_last = 'report_last';
+  static const detail_report_last = 'detail_report_last';
   static const emergency_response = 'emergency_response';
   static const detail_emergency_response = 'detail_emergency_response';
   static const toolbox_talk = 'toolbox_talk';

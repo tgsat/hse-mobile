@@ -17,7 +17,6 @@ itemSingleRow(String title, String content) => Row(
       ],
     );
 itemTwoColumnWithImage(String title, Widget widgets) => Container(
-      margin: EdgeInsets.symmetric(horizontal: 12),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

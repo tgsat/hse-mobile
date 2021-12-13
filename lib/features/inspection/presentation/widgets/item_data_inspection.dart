@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:hse_product/core/presentation/widgets/card/custom_item_card.dart';
 import 'package:hse_product/core/presentation/widgets/item_two/item_two_row_start.dart';
-import 'package:hse_product/features/inspection/presentation/widgets/item_card_list.dart';
 
 class ItemDataInspection extends StatelessWidget {
   const ItemDataInspection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ItemCardListInspection(
+    return CustomItemCard(
       assets: 'assets/images/approved.png',
-      widget1: itemTwoRowsStart('Tanggal', '11/11/2021', 'Jenis', '-'),
-      widget2:
-          itemTwoRowsStart('Batas Tanggal', '01/12/2021', 'Status', 'Open'),
+      widgetall: Column(
+        children: [
+          itemRow(firstRow: 'Tgl Inspeksi', secondRow: '11/12/2021'),
+          itemRow(
+              firstRow: 'Jenis Inspeksi', secondRow: 'Alat Angkat & Angkut'),
+          itemRow(firstRow: 'Batas Tgl Perbaikan', secondRow: '22/12/2021'),
+          itemRow(firstRow: 'Status', secondRow: 'close'),
+        ],
+      ),
     );
   }
 }
