@@ -12,11 +12,11 @@ itemRowProfile(BuildContext context, String title, String location,
       SizedBox(height: 4),
       Row(mainAxisAlignment: MainAxisAlignment.center, children: [
         Container(height: 18, width: 18, child: Image.asset(location)),
-        SizedBox(width: 8),
-        Text(address),
+        SizedBox(width: 6),
+        Text(address, style: Theme.of(context).textTheme.bodyText2),
       ]),
       SizedBox(height: 4),
-      Text(version),
+      Text(version, style: Theme.of(context).textTheme.bodyText2),
     ],
   );
 }
